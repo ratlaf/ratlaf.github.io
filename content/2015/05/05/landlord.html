@@ -11,6 +11,7 @@
 
         .cover-page {
             position: relative;
+            height: 40vh;            
         }
         .cover-image-initial, .cover-image-final {
             
@@ -19,13 +20,13 @@
             /* Firefox 3.6 */
             background-position: center;
             /* Internet Explorer 7/8 */
-            height: 100vh;
         }
         .cover-image-initial {
-            position: relative;
+            position: absolute;
             top: 0;
             left: 0;
-            overflow: hidden;
+            right: 0;
+            bottom: 0;
             z-index: 0;
         }
         .cover-image-final {
@@ -34,6 +35,7 @@
             left: 0;
             right: 0;
             bottom: 0;
+            z-index: 1;
         }
         .cover-image-intial{
             display: none;
