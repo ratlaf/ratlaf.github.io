@@ -396,14 +396,6 @@
 
     <script>
         ZnetUI.lazyLoadCSS('https://ratlaf.github.io//css/story.css', {}, function(){
-            console.log('calleback');
-            ZnetUI.nav('navbar', 
-                {   
-                    minScrollDown: window.innerHeight, 
-                    coverPageHome:'full-screen-home',
-                    tabNav: 'tab-nav'
-                }
-            );
             ZnetUI.titleFill(
                 'cover-title', 
                 {
@@ -420,18 +412,6 @@
                     yNudgeDown: 0
                 }
             );
-            ZnetUI.TOC(
-                {
-                    navHeight: 60
-                }
-            );
-            ZnetUI.lazyLoadImages(
-                'lazy-image', 
-                {
-                    buffer: 500
-                }
-            );
-            ZnetUI.lazyLoadCSS('https://ratlaf.github.io//css/fontello.css');
             ZnetUI.footnotes(
                 'footnote-collection',
                 {
@@ -440,6 +420,25 @@
             )
         });
         
+        ZnetUI.nav('navbar', 
+            {   
+                minScrollDown: window.innerHeight, 
+                coverPageHome:'full-screen-home',
+                tabNav: 'tab-nav'
+            }
+        );
+        ZnetUI.TOC(
+            {
+                navHeight: 60
+            }
+        );
+        ZnetUI.lazyLoadImages(
+            'lazy-image', 
+            {
+                buffer: 500
+            }
+        );
+        ZnetUI.lazyLoadCSS('https://ratlaf.github.io//css/fontello.css');
         
     </script>
 </body>
