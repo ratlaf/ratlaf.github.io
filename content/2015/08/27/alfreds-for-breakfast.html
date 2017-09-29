@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <!-- bare minimum css to render above the fold content.-->
+    <style>
+        body {
+            margin: 0;
+            width: 100%;
+        }
+
+        .cover-page {
+            position: relative;
+        }
+        .cover-image-initial, .cover-image-final {
+            
+            background-size: cover;
+            -moz-background-size: cover;
+            /* Firefox 3.6 */
+            background-position: center;
+            /* Internet Explorer 7/8 */
+            height: 100vh;
+        }
+        .cover-image-initial {
+            position: relative;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: 0;
+        }
+        .cover-image-final {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        .cover-image-intial{
+            display: none;
+        }
+        .loading {
+            filter:blur(20px);
+        }
+
+        @media screen and (orientation:portrait) {
+            body:after{
+                content: 'http://ratlaf.github.io//images/mobile_portrait/wegener.jpg';
+                display: none;
+            }
+            .cover-image-initial {
+                background-image: url("data:image/png;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/wAALCAAoABcBASIA/8QAGQAAAgMBAAAAAAAAAAAAAAAABAUAAgMG/8QAIhAAAgICAQQDAQAAAAAAAAAAAQIDEQAEEgUhIjEyQVFh/9oACAEBAAA/AMeq6WuqIEjEdyKvIH6OD9R6RDFpo2oGeS6JJ94hkVopCrCmU0RjjddRxcymRyR2N/WbbfWBLrJTVL7r8xI6liWJJYmzhu3x4Kb8roC8DXyJOWAJQnDdhOWtAGjZJSDzJFX37YGYWTsMjGo/eddP1mAr5Qc1/pGKdrd03+OioP6HrFc4EnwiKj+EnP/Z");
+            }
+        }
+
+        @media screen and (orientation:landscape) and (max-width: 767px) {
+            body:after{
+                content: 'http://ratlaf.github.io//images/medium/wegener.jpg';
+                display: none;
+            }
+            .cover-image-initial {
+                background-image: url("data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/wAALCAAXACgBASIA/8QAFwAAAwEAAAAAAAAAAAAAAAAAAgQFA//EACYQAAICAgECBQUAAAAAAAAAAAECAxEABBIFIRMiMUFxQlFhobH/2gAIAQEAAD8ATmHN5zdHgR+8PpmujqzOSK9gLzWQa77caPEAoBFsKs5H3ERJmEZJX+YMMZk+oCu+WjpGHadHN8aYknFQXikcO3IseVjv84ttE+Vhff0OYkeQ4EbFW7e+WeqSPPsSlQVDAe+L6jrCB4kCyG/UnvWNTjp5UVHKvwcl7ASj4fKvzmCVzX7Xn//Z");
+            }
+        }
+        @media screen and (orientation:landscape) and (min-width: 768px) {
+            body:after{
+                content: 'http://ratlaf.github.io//images/large/wegener.jpg';
+                display: none;
+            }
+            .cover-image-initial {
+                background-image: url("data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/wAALCAAXACgBASIA/8QAFwAAAwEAAAAAAAAAAAAAAAAAAgQFA//EACYQAAICAgECBQUAAAAAAAAAAAECAxEABBIFIRMiMUFxQlFhobH/2gAIAQEAAD8ATmHN5zdHgR+8PpmujqzOSK9gLzWQa77caPEAoBFsKs5H3ERJmEZJX+YMMZk+oCu+WjpGHadHN8aYknFQXikcO3IseVjv84ttE+Vhff0OYkeQ4EbFW7e+WeqSPPsSlQVDAe+L6jrCB4kCyG/UnvWNTjp5UVHKvwcl7ASj4fKvzmCVzX7Xn//Z");
+            }
+        }
+
+        .navbar,
+        .full-screen-home,
+        .tab-nav,
+        .cover-page h1 {
+            display: none;
+        }
+    </style>
+
+    <script>
+    document.documentElement.classList.remove("no-js");
+    document.documentElement.classList.add("js");
+</script>
+
+<meta charset="utf-8" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Alfreds For Breakfast</title>
+<meta name="description" content="Albert wants to get the man who proposed plate tectonics removed from highschool textbooks.">
+
+<link rel="canonical" href="http://ratlaf.github.io///content/2015/08/27/alfreds-for-breakfast.html">
+<link rel="alternate" type="application/rss+xml" title="ZacharyBell.net" href="http://ratlaf.github.io///feed.xml">
+<script>
+
+</script>
+    <meta property="og:url" content="http://ratlaf.github.io///content/2015/08/27/alfreds-for-breakfast.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Alfreds For Breakfast" />
+    <meta property="og:description" content="Albert wants to get the man who proposed plate tectonics removed from highschool textbooks." />
+    <meta property="og:image" content="http://ratlaf.github.io//images/medium/wegener.jpg" />
+    <meta property="fb:app_id" content="466074093735144" />
+
+</head>
+
+<body>
+    <div class="main-container">
+        <div id="navbar" class="navbar sticky nav-hide">
+	<div class="nav-wrapper">
+		<div class="container-medium main-nav">
+			<span>
+				<a href="/" class="site-logo">
+					ZB
+				</a>
+			</span>
+			<span class="nav-button">
+				<a href="http://ratlaf.github.io/">
+					stories
+				</a>
+			</span>
+			<span class="nav-button">
+				<a  href="http://ratlaf.github.io//blog">
+					blog
+				</a>
+			</span>
+			<span class="nav-button">
+				<a href="http://ratlaf.github.io//contact">
+					contact
+				</a>
+			</span>
+			<span class="nav-button">
+				<a href="http://ratlaf.github.io//search">
+					search
+				</a>
+			</span>
+		</div>
+	</div>
+</div>
+
+<a href="/" id="full-screen-home" class="full-screen-home nav-hide">
+	<span href="/" class="site-logo">ZB</span>
+	<span>home</span>
+</a>
+<a href="#footer-nav-home" id="tab-nav" class="tab-nav">
+	<span>skip to navigation</span>
+</a>
+ 
+        <div class="cover-page">
+    <div class="cover-image-initial"></div>
+    <div class="cover-image-final"></div>  
+    <h1 id="cover-title" class="cover-title">Alfreds For Breakfast</h1>
+</div>
+
+
+
+<div class="story-container container-small">
+    
+    <div id="story" class="story" data-story-number="1">
+        <p>When George walked into the diner, Albert was already on his stool, bent over a sheet of paper, laboriously writing with a stub of a pencil.</p>
+
+<p>“Best finish that homework, Albert,” George said, seating himself two stools down, “Bus’ll be here soon.”</p>
+
+<p>“Shut up,” Albert said.</p>
+
+<p>“What’s he doing?” George said to Patrice as she came by with his coffee. It was early and George and Albert were the diner’s only customers.</p>
+
+<p>“He’s writing to a school board in Dallas. You want the usual?” Patrice said.</p>
+
+<p>“Oh. Yeah, usual’s fine,” George said.</p>
+
+<p>“Coming right up.”</p>
+
+<p>Patrice slapped the bell and Javier, somewhere out of sight in the kitchen, grunted a sleepy reply.</p>
+
+<p>“Pat?” George said after a moment's consideration, “Albert know we live in Omaha?”</p>
+
+<p>“Probably.”</p>
+
+<p>George glanced at Albert, who glared back in that way he had of glaring.</p>
+
+<p>“So Pat? Why’s Albert writing a school board in Texas?”</p>
+
+<p>“He’s trying to get the theory of plate tectonics removed from high school textbooks,” Pat said.</p>
+
+<p>“Now comes the part where I ask why he’d do such a fool thing, but I ain’t gonna, because I don’t care.”</p>
+
+<p>“Texas can apparently dictate text book guidelines on account of it being such a big state,” Patrice said.</p>
+
+<p>“Huh,” George said. He sipped loudly from his coffee. The moment stretched out.</p>
+
+<p>"Ask, goddamnit," Albert said, still glaring.</p>
+
+<p>“What’ve you got against plate tectonics, Albert?” George finally said.</p>
+
+<p>“Nothing. I’m continental drift’s biggest fan,” Albert said, returning to his letter. He wrote with the single-minded squint of a second grader.</p>
+
+<p>“So…”</p>
+
+<p>“So, a theory hasn’t really hit its stride until some chromosome-poor jaw-tumor tries to get it removed from the curriculum.”</p>
+
+<p>“Which is what you’re doing now.”</p>
+
+<p>“Alfred Wegener was a badass, dog eating, arctic son of a bitch. I want half the people drawing X's on his grave and the other half forming a mob to dig up his corpse and put it on trial posthumously.”</p>
+
+<p>Rather than ask Alfred for clarification on any of this—never a good idea—George looked over at Patrice.</p>
+
+<p>“Alfred Wegner is the fella that first came up with the idea of continental drift,” Patrice offered, “ain’t that just what we need? Another Alfred, I mean.”</p>
+
+<p>“Yes. The more Alfreds the better,” Alfred said.</p>
+
+<p>“Did you just know that Wegner guy’s name, Pat? Am I the only ignoramus here?” George said.</p>
+
+<p>“No no," Patrice said, "I’ve been listening to our Albert go on for almost an hour now. It’s been an unwilling education.”</p>
+
+<p>“Alfred Wegner's name should be there with Charles Darwin, but it's never going to be until he’s been properly vilified. Problem is, I don’t think the anti-evolution idiots understand enough about plate tectonics to get a good religious panic going.”</p>
+
+<p>“I don't recall that the Bible has a lot to say about continental drift,” George said.</p>
+
+<p>“Plate tectonics is at least partially responsible for most speciation. We have kangaroos in Australia and llamas in Peru because the continents drifted apart. So there's an evolution angle. It doesn't allow for any young-earth bullshit either, because a hundred thousand years is an afternoon's nap for a continent. That should be more than enough to contradict some Biblical bibble-babble."</p>
+
+<p>“You're getting diatribe all over my eggs,” George groused.</p>
+
+<p>Albert waved him off with an imperious, graphite-smudged hand and went back to sermonizing,</p>
+
+<p>“They threw Galileo into a tower and everyone knows who Darwin was. Drew him with an ape body and today we’re still arguing  evolution vs. bedtime stories.”</p>
+
+<p>“It wasn’t scandal that immortalized Darwin, it was the elegance of—” George ventured, but Albert verbally shoved him aside.</p>
+
+<p>“Reactionary idiots dumped ice water on Ed Wilson's head for sociobiology. That's not a Snopes Monkey Trial, but at least it's <em>something</em>.”</p>
+
+<p>“So, out of a sense of...fairness, you want this this other Albert, the Wegener fella, you want his name removed from textbooks?”</p>
+
+<p>“No. I want someone to <em>try</em> to remove his name from the textbooks. Until your ideas have made a racing fan, be they NASCAR or chariot, wonder if they really will see grandma in candyland after they die, then you haven’t arrived. Vilification is vindication. A parable.”</p>
+
+<p>Alfred accompanied this speech with waggles of his pencil, as if directing the motley orchestra of his mind.</p>
+
+<p>“You believe that, huh?” George said. Patrice slid his eggs across the counter with an eye-roll.</p>
+
+<p>“The theory of plate tectonics is one of the most elegant, important ideas man has ever had," Alfred said.</p>
+
+<p>“I ain’t disagreeing," George said, "but maybe the idea itself matters more than getting full credit.”</p>
+
+<p>“Pssh,” Alfred said, dismissively.</p>
+
+<p>“Alright, well hold on a minute, let me…”</p>
+
+<p>George dug his Otter-boxed phone out of his pocket and poked at the battered screen for a moment.</p>
+
+<p>“Alright, yes, here. Alfred Wallace, just as an example.”</p>
+
+<p>Patrice, who had been half-following the conversation, turned around, her hands on her hips.</p>
+
+<p>“Great,” she said, “yet another Alfred.”</p>
+
+<p>“Oh yeah,” George said, “Didn’t even think of that until after I said it.”</p>
+
+<p>“Well, who’s this one?” Patrice said.</p>
+
+<p>“He’s the guy that came up with the idea of evolution at the same time Darwin did, but never got the same recognition. The man wound up spending his life in Darwin’s shadow, actually defending Darwin's <em>Origin</em>. Don’t think he was bitter though. Didn’t want to be famous, particularly. I think he was happy enough in just knowing the idea got loose. Science should exist separate to society and politics whenever it can. If plate techtonics is a done deal, then leave it be.”</p>
+
+<p>“Alfred <em>Wegener</em> risked his life for answers,” Alfred interrupted, “The man went to the Arctic for the sake of science. He got frostbite and cut his toes off with a penknife. When the expedition ran out of food, he killed and ate his sled dogs—"</p>
+
+<p>"I was wondering about the dog-eating part," George said.</p>
+
+<p>"—and he eventually died up there in Greenland. He died for <em>science</em>. I want to see him enter the canon for his achievements. By name. Alfred Wegener”</p>
+
+<p>“Got nothing to do with him having your name?" Patrice said.</p>
+
+<p>“Maybe a little,” Albert said, returning to the letter.</p>
+
+    </div>
+
+    <div class="footnote-collection" data-footnote-collection="1">
+        <ul class="footnotes"></ul>
+    </div>
+
+    
+</div>
+<div class="social-buttons-container container-small">
+    
+
+
+<div class="socialButtons">
+	<span class="nag">i don't need your approval</span>
+    
+        <a aria-label="twitter button" onclick="window.open('http://twitter.com/share?text=' + encodeURIComponent('Alfreds For Breakfast') + ' %7C A short story by Zachary Bell %7C via @zachary_bell &url=http://ratlaf.github.io//content/2015/08/27/alfreds-for-breakfast.html', 'windowOpenTab', 'width=600,height=450,left=100, top=100'); return false;" href="">
+            <span class="icon-twitter"> </span>
+        </a>
+        
+    <a  aria-label="reddit button" onclick="window.open('http://reddit.com/submit?url=http://ratlaf.github.io//content/2015/08/27/alfreds-for-breakfast.html&title=' + encodeURIComponent('Alfreds For Breakfast'), 'windowOpenTab', 'width=1000,height=600,left=100, top=100'); return false;" href="">
+    	<span class="icon-reddit"> </span>
+    </a>
+    <a aria-label="facebook button" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=http://ratlaf.github.io//content/2015/08/27/alfreds-for-breakfast.html&title=' + encodeURIComponent('Alfreds For Breakfast'), 'windowOpenTab', 'width=1000,height=600,left=100, top=100'); return false;" href="">
+        <span class="icon-facebook"> </span>
+    </a>
+
+    
+        <a aria-label="email button" onclick="window.location.href = 'mailto:?subject=' + encodeURIComponent('Alfreds For Breakfast') + '%3A%20A%20short%20story%20by%20Zachary%20Bell&body=' + encodeURIComponent('Albert wants to get the man who proposed plate tectonics removed from highschool textbooks.') + '%0A%0A http://ratlaf.github.io//content/2015/08/27/alfreds-for-breakfast.html'; return false;" href="">
+            <span class="icon-mail"> </span>
+        </a>
+    
+    <span class="sub-nag">i just desperately want it</span>
+</div>
+
+
+
+            
+</div>
+<div class="keep-reading-container container-small">
+    <ol id="keep-reading" class="story-menu">
+    
+    <li class="story-quaternary"><article class="story-summary summary-small" data-slug="The Demonist">
+	<a href="/content/2015/10/10/the-demonist.html">
+		<div class="cover-wrapper">
+			<div class="cover-image lazy-image" data-background="http://ratlaf.github.io//images/thumbnail/whosblowingwhom.jpg">
+				<h3 class="story-title">The Demonist</h3>
+			</div>
+		</div>
+		<div class="info-wrapper">
+			<p class="excerpt">
+				Tim buys a book. Tim accidentally summons a demon. Hilarity, carnage, ensue.
+			</p>
+        </div>
+	</a>
+</article></li>
+    
+    <li class="story-quaternary"><article class="story-summary summary-small" data-slug="A Last Minute Truth">
+	<a href="/content/2015/10/08/a-last-minute-truth.html">
+		<div class="cover-wrapper">
+			<div class="cover-image lazy-image" data-background="http://ratlaf.github.io//images/thumbnail/45bullet-closer.jpg">
+				<h3 class="story-title">A Last Minute Truth</h3>
+			</div>
+		</div>
+		<div class="info-wrapper">
+			<p class="excerpt">
+				Old, embittered and depressed, Eustace decides to kill himself. Then he does something else.
+			</p>
+        </div>
+	</a>
+</article></li>
+    
+    <li class="story-quaternary"><article class="story-summary summary-small" data-slug="Taking Pictures of Cats Having Sex In Istanbul">
+	<a href="/content/2015/09/21/taking-pictures-of-cats-having-sex-in-istanbul.html">
+		<div class="cover-wrapper">
+			<div class="cover-image lazy-image" data-background="http://ratlaf.github.io//images/thumbnail/mosque.jpg">
+				<h3 class="story-title">Taking Pictures of Cats Having Sex In Istanbul</h3>
+			</div>
+		</div>
+		<div class="info-wrapper">
+			<p class="excerpt">
+				Wherein I travel to distant lands, try to get a nice souvenir  and then engage in philosophical debate with policeman.
+			</p>
+        </div>
+	</a>
+</article></li>
+    
+    <li class="story-quaternary"><article class="story-summary summary-small" data-slug="Welcome Travelers, To Dublin">
+	<a href="/content/2015/09/18/welcome-travelers-to-dublin.html">
+		<div class="cover-wrapper">
+			<div class="cover-image lazy-image" data-background="http://ratlaf.github.io//images/thumbnail/double-decker-bus.jpg">
+				<h3 class="story-title">Welcome Travelers, To Dublin</h3>
+			</div>
+		</div>
+		<div class="info-wrapper">
+			<p class="excerpt">
+				We took this double-decker bus and maybe someone got murdered and then my mom didn't save my luggage from disaster.
+			</p>
+        </div>
+	</a>
+</article></li>
+    
+    <li class="story-quaternary"><article class="story-summary summary-small" data-slug="Alfreds For Breakfast">
+	<a href="/content/2015/08/27/alfreds-for-breakfast.html">
+		<div class="cover-wrapper">
+			<div class="cover-image lazy-image" data-background="http://ratlaf.github.io//images/thumbnail/wegener.jpg">
+				<h3 class="story-title">Alfreds For Breakfast</h3>
+			</div>
+		</div>
+		<div class="info-wrapper">
+			<p class="excerpt">
+				Albert wants to get the man who proposed plate tectonics removed from highschool textbooks.
+			</p>
+        </div>
+	</a>
+</article></li>
+    
+    <li class="story-quaternary"><article class="story-summary summary-small" data-slug="Juney's Coming For A Visit">
+	<a href="/content/2015/08/21/juneys-coming-for-a-visit.html">
+		<div class="cover-wrapper">
+			<div class="cover-image lazy-image" data-background="http://ratlaf.github.io//images/thumbnail/chicken.jpg">
+				<h3 class="story-title">Juney's Coming For A Visit</h3>
+			</div>
+		</div>
+		<div class="info-wrapper">
+			<p class="excerpt">
+				George's daughter will be in town for Christmas, Alfred isn't as racist as he sounds and Javier's cousin is being deported.
+			</p>
+        </div>
+	</a>
+</article></li>
+    
+</ol>        
+</div>
+ 
+        <div class="container-small">
+            <div id="footer-nav" class="footer-nav">
+    <a id="footer-nav-home" href="/">home</a>
+    <a href="/">stories</a>
+    <a href="/blog">blog</a>
+    <a href="/contact">contact</a>
+    <a href="/search">search</a>
+</div>
+            <footer>
+    <div class="footer-meta">
+        
+            <h1>Alfreds For Breakfast</h1>            
+        
+        <p>
+            Copyright © <span class="copyright-date">2017</span> Zachary Bell - All Rights Reserved. Except where otherwise noted,
+            contents of this site including text and media may not be reproduced without prior
+            written consent.
+        </p>
+        <p>
+            
+            Banner image courtesy of <a href="http://en.wikipedia.org/wiki/Alfred_Wegener" target="_blank" rel="noopener">Wikipedia</a>
+            
+        </p>
+        <span class="pw__vs">vs:</span><span class="pw__sm">sm:</span><span class="pw__md">md:</span><span class="pw__lg">lg:</span><span>107</span>
+    </div>
+</footer>
+        </div>
+    </div>
+    <script>
+        var getCoverImage = function () {
+            var img;
+            var resizeId;
+
+            // Quit early if older browser (e.g. IE8).
+            if (!('addEventListener' in window)) {
+                return;
+            }
+
+            var init = function(){
+                img = new Image();
+
+                var backgroundImage = window.getComputedStyle(document.body,':after').getPropertyValue('content');
+                img.src = backgroundImage.replace(/['"]+/g, '');
+                // Assign an onLoad handler to the dummy image *before* assigning the src
+                img.onload = function () {
+                    var $coverImageInitial = document.getElementsByClassName('cover-image-initial')[0];
+                    var $coverImageFinal = document.getElementsByClassName('cover-image-final')[0];
+
+                    $coverImageFinal.style.backgroundImage = 'url(' + img.src + ')';
+                    //$coverImageInitial.style.display = "none";
+                };
+            }
+
+            init();
+            window.addEventListener('resize', function(){
+                clearTimeout(resizeId);
+                resizeId = setTimeout(function(){
+                    init();
+                }, 150);
+            }, true);
+        }
+        getCoverImage();
+    </script>
+    
+    <link rel="stylesheet" href="http://ratlaf.github.io//css/story.css"> 
+    
+    <!-- inject:js -->
+<script src="/javascript-combined/znet.js"></script>
+<!-- endinject -->
+
+<script>
+    var currentTime = new Date();
+    document.getElementsByClassName('copyright-date')[0].innerHTML = currentTime.getFullYear();
+</script>
+
+    <script>
+        ZnetUI.nav('navbar', 
+            {   
+                minScrollDown: window.innerHeight, 
+                coverPageHome:'full-screen-home',
+                tabNav: 'tab-nav'
+            }
+        );
+        ZnetUI.titleFill(
+            'cover-title', 
+            {
+                paddingX: 10,
+                yNudgeDown: 100
+            }
+        );
+        ZnetUI.titleFill(
+            'story-title',
+            {
+                paddingX: 10,
+                titleAlignment: "center",
+                yNudgeDown: 0
+            }
+        );
+        ZnetUI.TOC(
+            {
+                navHeight: 60
+            }
+        );
+        ZnetUI.lazyLoadImages(
+            'lazy-image', 
+            {
+                buffer: 500
+            }
+        );
+        ZnetUI.lazyLoadCSS('http://ratlaf.github.io//css/fontello.css');
+        ZnetUI.footnotes(
+            'footnote-collection',
+            {
+                nudge: -11
+            }
+        )
+        //$(".footnote-collection").znetFootnotes({ nudge: -11 });
+        
+    </script>
+</body>
+
+</html>

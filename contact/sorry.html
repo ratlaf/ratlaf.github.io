@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <!-- bare minimum css to render above the fold content.-->
+    <style>
+        body {
+            margin: 0;
+            width: 100%;
+        }
+
+        .cover-page {
+            position: relative;
+        }
+        .cover-image-initial, .cover-image-final {
+            
+            background-size: cover;
+            -moz-background-size: cover;
+            /* Firefox 3.6 */
+            background-position: center;
+            /* Internet Explorer 7/8 */
+            height: 100vh;
+        }
+        .cover-image-initial {
+            position: relative;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: 0;
+        }
+        .cover-image-final {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        .cover-image-intial{
+            display: none;
+        }
+        .loading {
+            filter:blur(20px);
+        }
+
+        @media screen and (orientation:portrait) {
+            body:after{
+                content: 'http://ratlaf.github.io//images/mobile_portrait/';
+                display: none;
+            }
+            .cover-image-initial {
+                background-image: url("data:image/png;base64,");
+            }
+        }
+
+        @media screen and (orientation:landscape) and (max-width: 767px) {
+            body:after{
+                content: 'http://ratlaf.github.io//images/medium/';
+                display: none;
+            }
+            .cover-image-initial {
+                background-image: url("data:image/png;base64,");
+            }
+        }
+        @media screen and (orientation:landscape) and (min-width: 768px) {
+            body:after{
+                content: 'http://ratlaf.github.io//images/large/';
+                display: none;
+            }
+            .cover-image-initial {
+                background-image: url("data:image/png;base64,");
+            }
+        }
+
+        .navbar,
+        .full-screen-home,
+        .tab-nav,
+        .cover-page h1 {
+            display: none;
+        }
+    </style>
+
+    <script>
+    document.documentElement.classList.remove("no-js");
+    document.documentElement.classList.add("js");
+</script>
+
+<meta charset="utf-8" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>ZacharyBell.net</title>
+<meta name="description" content="Only the finest in novels, short stories and blog-like materials.">
+
+<link rel="canonical" href="http://ratlaf.github.io///contact/sorry.html">
+<link rel="alternate" type="application/rss+xml" title="ZacharyBell.net" href="http://ratlaf.github.io///feed.xml">
+<script>
+
+</script>
+    <meta property="og:url" content="http://ratlaf.github.io///contact/sorry.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="http://ratlaf.github.io//images/medium/" />
+    <meta property="fb:app_id" content="466074093735144" />
+
+</head>
+
+<body>
+    <div class="main-container">
+        <div id="navbar" class="navbar sticky nav-hide">
+	<div class="nav-wrapper">
+		<div class="container-medium main-nav">
+			<span>
+				<a href="/" class="site-logo">
+					ZB
+				</a>
+			</span>
+			<span class="nav-button">
+				<a href="http://ratlaf.github.io/">
+					stories
+				</a>
+			</span>
+			<span class="nav-button">
+				<a  href="http://ratlaf.github.io//blog">
+					blog
+				</a>
+			</span>
+			<span class="nav-button">
+				<a href="http://ratlaf.github.io//contact">
+					contact
+				</a>
+			</span>
+			<span class="nav-button">
+				<a href="http://ratlaf.github.io//search">
+					search
+				</a>
+			</span>
+		</div>
+	</div>
+</div>
+
+<a href="/" id="full-screen-home" class="full-screen-home nav-hide">
+	<span href="/" class="site-logo">ZB</span>
+	<span>home</span>
+</a>
+<a href="#footer-nav-home" id="tab-nav" class="tab-nav">
+	<span>skip to navigation</span>
+</a>
+ 
+        <div class="blogHeader">
+    <h1 class="banner">sorry</h1>
+    <span class="tagline">something broke</span>
+</div>
+<div class="container blog">
+    <div class="row">
+        <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
+            <h2 class="subTitle">
+                what broke?
+            </h2>
+            <p>
+                Javascript, probably.
+            <h2 class="subTitle">
+                Why did it break?
+            </h2>
+            <p>
+                Who knows? Who cares? We've got more important things to do.  
+            </p>
+            <h2 class="subTitle">
+                Well, what do I do now?
+            </h2>
+            <p>
+                I am sorry it's come to this, but I have  secret back-up form for
+                when everything else has exploded. While you're down there, will you please
+                let me know what went wrong so I can fix it?
+            </p>
+            
+            <iframe src="https://docs.google.com/forms/d/17hrhFmNheV6EPmdcTdyNUfkFrW4k8nCzdy_Fr-9HOjY/viewform?embedded=true" width="760" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+        </div>
+    </div>
+</div>
+
+
+
+ 
+        <div class="container-small">
+            <div id="footer-nav" class="footer-nav">
+    <a id="footer-nav-home" href="/">home</a>
+    <a href="/">stories</a>
+    <a href="/blog">blog</a>
+    <a href="/contact">contact</a>
+    <a href="/search">search</a>
+</div>
+            <footer>
+    <div class="footer-meta">
+        
+        <p>
+            Copyright © <span class="copyright-date">2017</span> Zachary Bell - All Rights Reserved. Except where otherwise noted,
+            contents of this site including text and media may not be reproduced without prior
+            written consent.
+        </p>
+        <p>
+            
+        </p>
+        <span class="pw__vs">vs:</span><span class="pw__sm">sm:</span><span class="pw__md">md:</span><span class="pw__lg">lg:</span><span>107</span>
+    </div>
+</footer>
+        </div>
+    </div>
+    <script>
+        var getCoverImage = function () {
+            var img;
+            var resizeId;
+
+            // Quit early if older browser (e.g. IE8).
+            if (!('addEventListener' in window)) {
+                return;
+            }
+
+            var init = function(){
+                img = new Image();
+
+                var backgroundImage = window.getComputedStyle(document.body,':after').getPropertyValue('content');
+                img.src = backgroundImage.replace(/['"]+/g, '');
+                // Assign an onLoad handler to the dummy image *before* assigning the src
+                img.onload = function () {
+                    var $coverImageInitial = document.getElementsByClassName('cover-image-initial')[0];
+                    var $coverImageFinal = document.getElementsByClassName('cover-image-final')[0];
+
+                    $coverImageFinal.style.backgroundImage = 'url(' + img.src + ')';
+                    //$coverImageInitial.style.display = "none";
+                };
+            }
+
+            init();
+            window.addEventListener('resize', function(){
+                clearTimeout(resizeId);
+                resizeId = setTimeout(function(){
+                    init();
+                }, 150);
+            }, true);
+        }
+        getCoverImage();
+    </script>
+    
+    <link rel="stylesheet" href="http://ratlaf.github.io//css/story.css"> 
+    
+    <!-- inject:js -->
+<script src="/javascript-combined/znet.js"></script>
+<!-- endinject -->
+
+<script>
+    var currentTime = new Date();
+    document.getElementsByClassName('copyright-date')[0].innerHTML = currentTime.getFullYear();
+</script>
+
+    <script>
+        ZnetUI.nav('navbar', 
+            {   
+                minScrollDown: window.innerHeight, 
+                coverPageHome:'full-screen-home',
+                tabNav: 'tab-nav'
+            }
+        );
+        ZnetUI.titleFill(
+            'cover-title', 
+            {
+                paddingX: 10,
+                yNudgeDown: 100
+            }
+        );
+        ZnetUI.titleFill(
+            'story-title',
+            {
+                paddingX: 10,
+                titleAlignment: "center",
+                yNudgeDown: 0
+            }
+        );
+        ZnetUI.TOC(
+            {
+                navHeight: 60
+            }
+        );
+        ZnetUI.lazyLoadImages(
+            'lazy-image', 
+            {
+                buffer: 500
+            }
+        );
+        ZnetUI.lazyLoadCSS('http://ratlaf.github.io//css/fontello.css');
+        ZnetUI.footnotes(
+            'footnote-collection',
+            {
+                nudge: -11
+            }
+        )
+        //$(".footnote-collection").znetFootnotes({ nudge: -11 });
+        
+    </script>
+</body>
+
+</html>
