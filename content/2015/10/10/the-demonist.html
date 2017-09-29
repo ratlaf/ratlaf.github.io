@@ -838,6 +838,10 @@
         <span class="pw__vs">vs:</span><span class="pw__sm">sm:</span><span class="pw__md">md:</span><span class="pw__lg">lg:</span><span>107</span>
     </div>
 </footer>
+<script>
+    var currentTime = new Date();
+    document.getElementsByClassName('copyright-date')[0].innerHTML = currentTime.getFullYear();
+</script>
         </div>
     </div>
     <script>
@@ -881,11 +885,6 @@
     <!-- inject:js -->
 <script src="/javascript-combined/znet.js"></script>
 <!-- endinject -->
-
-<script>
-    var currentTime = new Date();
-    document.getElementsByClassName('copyright-date')[0].innerHTML = currentTime.getFullYear();
-</script>
 
     <script>
         ZnetUI.nav('navbar', 
