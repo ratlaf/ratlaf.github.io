@@ -881,55 +881,56 @@
         getCoverImage();
     </script>
     
-    <link rel="stylesheet" href="https://ratlaf.github.io//css/story.css"> 
-    
     <!-- inject:js -->
 <script src="/javascript-combined/znet.js"></script>
 <!-- endinject -->
 
     <script>
-        ZnetUI.nav('navbar', 
-            {   
-                minScrollDown: window.innerHeight, 
-                coverPageHome:'full-screen-home',
-                tabNav: 'tab-nav'
-            }
-        );
-        ZnetUI.titleFill(
-            'cover-title', 
-            {
-                paddingX: 10,
-                yNudgeDown: 0,
-                googleVHFix: true
-            }
-        );
-        ZnetUI.titleFill(
-            'story-title',
-            {
-                paddingX: 10,
-                titleAlignment: "center",
-                yNudgeDown: 0
-            }
-        );
-        ZnetUI.TOC(
-            {
-                navHeight: 60
-            }
-        );
-        ZnetUI.lazyLoadImages(
-            'lazy-image', 
-            {
-                buffer: 500
-            }
-        );
-        ZnetUI.lazyLoadCSS('https://ratlaf.github.io//css/fontello.css');
-        ZnetUI.footnotes(
-            'footnote-collection',
-            {
-                nudge: -11
-            }
-        )
-        //$(".footnote-collection").znetFootnotes({ nudge: -11 });
+        ZnetUI.lazyLoadCSS('https://ratlaf.github.io//css/story.css', {}, function(){
+            console.log('calleback');
+            ZnetUI.nav('navbar', 
+                {   
+                    minScrollDown: window.innerHeight, 
+                    coverPageHome:'full-screen-home',
+                    tabNav: 'tab-nav'
+                }
+            );
+            ZnetUI.titleFill(
+                'cover-title', 
+                {
+                    paddingX: 10,
+                    yNudgeDown: 0,
+                    googleVHFix: true
+                }
+            );
+            ZnetUI.titleFill(
+                'story-title',
+                {
+                    paddingX: 10,
+                    titleAlignment: "center",
+                    yNudgeDown: 0
+                }
+            );
+            ZnetUI.TOC(
+                {
+                    navHeight: 60
+                }
+            );
+            ZnetUI.lazyLoadImages(
+                'lazy-image', 
+                {
+                    buffer: 500
+                }
+            );
+            ZnetUI.lazyLoadCSS('https://ratlaf.github.io//css/fontello.css');
+            ZnetUI.footnotes(
+                'footnote-collection',
+                {
+                    nudge: -11
+                }
+            )
+        });
+        
         
     </script>
 </body>

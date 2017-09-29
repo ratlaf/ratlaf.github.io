@@ -1054,7 +1054,8 @@ html {
 body {
   font-size: 10px;
   margin: 0;
-  width: 100%; }
+  width: 100%;
+  color: #333333; }
 
 a {
   color: #FF2200;
