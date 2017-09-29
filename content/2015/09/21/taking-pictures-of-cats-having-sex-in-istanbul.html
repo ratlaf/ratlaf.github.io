@@ -11,10 +11,9 @@
 
         .cover-page {
             position: relative;
-            height: 40vh;            
+            height: 100vh;            
         }
         .cover-image-initial, .cover-image-final {
-            
             background-size: cover;
             -moz-background-size: cover;
             /* Firefox 3.6 */
@@ -421,7 +420,8 @@
             'cover-title', 
             {
                 paddingX: 10,
-                yNudgeDown: 100
+                yNudgeDown: 0,
+                googleVHFix: true
             }
         );
         ZnetUI.titleFill(
