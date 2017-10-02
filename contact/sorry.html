@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-
-<head>
-    <!-- bare minimum css to render above the fold content.-->
-    <style>
+    <head>
+        <!-- bare minimum css to render above the fold content.-->
+        <!-- bare minimum css to render above the fold content.-->
+<style>
         body {
             margin: 0;
             width: 100%;
+        }
+
+        #content-curtain {
+            visibility: hidden;
         }
 
         .cover-page {
@@ -79,8 +83,7 @@
             display: none;
         }
     </style>
-
-    <script>
+        <script>
     document.documentElement.classList.remove("no-js");
     document.documentElement.classList.add("js");
 </script>
@@ -98,58 +101,16 @@
 <script>
 
 </script>
-    <meta property="og:url" content="https://ratlaf.github.io///contact/sorry.html" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="" />
-    <meta property="og:description" content="" />
-    <meta property="og:image" content="https://ratlaf.github.io//images/medium/" />
-    <meta property="fb:app_id" content="466074093735144" />
-
-</head>
-
-<body>
-    <div class="main-container">
-        <div id="navbar" class="navbar sticky nav-hide">
-	<div class="nav-wrapper">
-		<div class="container-medium main-nav">
-			<span>
-				<a href="/" class="site-logo">
-					ZB
-				</a>
-			</span>
-			<span class="nav-button">
-				<a href="https://ratlaf.github.io/">
-					stories
-				</a>
-			</span>
-			<span class="nav-button">
-				<a  href="https://ratlaf.github.io//blog">
-					blog
-				</a>
-			</span>
-			<span class="nav-button">
-				<a href="https://ratlaf.github.io//contact">
-					contact
-				</a>
-			</span>
-			<span class="nav-button">
-				<a href="https://ratlaf.github.io//search">
-					search
-				</a>
-			</span>
-		</div>
-	</div>
-</div>
-
-<a href="/" id="full-screen-home" class="full-screen-home nav-hide">
-	<span href="/" class="site-logo">ZB</span>
-	<span>home</span>
-</a>
-<a href="#footer-nav-home" id="tab-nav" class="tab-nav">
-	<span>skip to navigation</span>
-</a>
- 
-        <div class="blogHeader">
+        <meta property="og:url" content="https://ratlaf.github.io///contact/sorry.html" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="https://ratlaf.github.io//images/medium/" />
+        <meta property="fb:app_id" content="466074093735144" />
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="blogHeader">
     <h1 class="banner">sorry</h1>
     <span class="tagline">something broke</span>
 </div>
@@ -184,121 +145,97 @@
 
 
  
-        <div class="container-small">
-            <div id="footer-nav" class="footer-nav">
-    <a id="footer-nav-home" href="/">home</a>
-    <a href="/">stories</a>
-    <a href="/blog">blog</a>
-    <a href="/contact">contact</a>
-    <a href="/search">search</a>
-</div>
-            <footer>
-    <div class="footer-meta">
-        
-        <p>
-            Copyright © <span class="copyright-date">2017</span> Zachary Bell - All Rights Reserved. Except where otherwise noted,
-            contents of this site including text and media may not be reproduced without prior
-            written consent.
-        </p>
-        <p>
-            
-        </p>
-        <span class="pw__vs">vs:</span><span class="pw__sm">sm:</span><span class="pw__md">md:</span><span class="pw__lg">lg:</span><span>107</span>
-    </div>
-</footer>
-<script>
-    var currentTime = new Date();
-    document.getElementsByClassName('copyright-date')[0].innerHTML = currentTime.getFullYear();
-</script>
         </div>
-    </div>
-    <script>
-        var getCoverImage = function () {
-            var img;
-            var resizeId;
+        <script>
+    var getCoverImage = function () {
+        var img;
+        var resizeId;
 
-            // Quit early if older browser (e.g. IE8).
-            if (!('addEventListener' in window)) {
-                return;
-            }
-
-            var init = function(){
-                img = new Image();
-
-                var backgroundImage = window.getComputedStyle(document.body,':after').getPropertyValue('content');
-                img.src = backgroundImage.replace(/['"]+/g, '');
-                // Assign an onLoad handler to the dummy image *before* assigning the src
-                img.onload = function () {
-                    var $coverImageInitial = document.getElementsByClassName('cover-image-initial')[0];
-                    var $coverImageFinal = document.getElementsByClassName('cover-image-final')[0];
-
-                    $coverImageFinal.style.backgroundImage = 'url(' + img.src + ')';
-                    //$coverImageInitial.style.display = "none";
-                };
-            }
-
-            init();
-            window.addEventListener('resize', function(){
-                clearTimeout(resizeId);
-                resizeId = setTimeout(function(){
-                    init();
-                }, 150);
-            }, true);
+        // Quit early if older browser (e.g. IE8).
+        if (!('addEventListener' in window)) {
+            return;
         }
-        getCoverImage();
-    </script>
-    
-    <!-- inject:js -->
+
+        var init = function(){
+            img = new Image();
+
+            var backgroundImage = window.getComputedStyle(document.body,':after').getPropertyValue('content');
+            img.src = backgroundImage.replace(/['"]+/g, '');
+            // Assign an onLoad handler to the dummy image *before* assigning the src
+            img.onload = function () {
+                var $coverImageInitial = document.getElementsByClassName('cover-image-initial')[0];
+                var $coverImageFinal = document.getElementsByClassName('cover-image-final')[0];
+
+                $coverImageFinal.style.backgroundImage = 'url(' + img.src + ')';
+                //$coverImageInitial.style.display = "none";
+            };
+        }
+
+        init();
+        window.addEventListener('resize', function(){
+            clearTimeout(resizeId);
+            resizeId = setTimeout(function(){
+                init();
+            }, 150);
+        }, true);
+    }
+    getCoverImage();
+</script>
+        <!-- inject:js -->
 <script src="/javascript-combined/znet.js"></script>
 <!-- endinject -->
-
-    <script>
-        ZnetUI.lazyLoadCSS('https://ratlaf.github.io//css/story.css', {}, function(){
-            ZnetUI.titleFill(
-                'cover-title', 
-                {
-                    paddingX: 10,
-                    yNudgeDown: 0,
-                    googleVHFix: true
+        <script>
+            ZnetUI.lazyLoadCSS('https://ratlaf.github.io//css/story.css', {}, function(){
+                ZnetUI.titleFill(
+                    'cover-title', 
+                    {
+                        paddingX: 10,
+                        yNudgeDown: 0,
+                        googleVHFix: true
+                    }
+                );
+                ZnetUI.titleFill(
+                    'story-title',
+                    {
+                        paddingX: 10,
+                        titleAlignment: "center",
+                        yNudgeDown: 0
+                    }
+                );
+                ZnetUI.footnotes(
+                    'footnote-collection',
+                    {
+                        nudge: -11
+                    }
+                );
+                ZnetUI.curtain(
+                    ['content-curtain'],
+                    {},
+                    function(){
+                        console.log('curtain-callback');
+                    }
+                )
+            });
+            
+            ZnetUI.nav('navbar', 
+                {   
+                    minScrollDown: window.innerHeight, 
+                    coverPageHome:'full-screen-home',
+                    tabNav: 'tab-nav'
                 }
             );
-            ZnetUI.titleFill(
-                'story-title',
+            ZnetUI.TOC(
                 {
-                    paddingX: 10,
-                    titleAlignment: "center",
-                    yNudgeDown: 0
+                    navHeight: 60
                 }
             );
-            ZnetUI.footnotes(
-                'footnote-collection',
+            ZnetUI.lazyLoadImages(
+                'lazy-image', 
                 {
-                    nudge: -11
+                    buffer: 500
                 }
-            )
-        });
-        
-        ZnetUI.nav('navbar', 
-            {   
-                minScrollDown: window.innerHeight, 
-                coverPageHome:'full-screen-home',
-                tabNav: 'tab-nav'
-            }
-        );
-        ZnetUI.TOC(
-            {
-                navHeight: 60
-            }
-        );
-        ZnetUI.lazyLoadImages(
-            'lazy-image', 
-            {
-                buffer: 500
-            }
-        );
-        ZnetUI.lazyLoadCSS('https://ratlaf.github.io//css/fontello.css');
-        
-    </script>
-</body>
-
+            );
+            ZnetUI.lazyLoadCSS('https://ratlaf.github.io//css/fontello.css');
+        </script>
+    </body>
 </html>

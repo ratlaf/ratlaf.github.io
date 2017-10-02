@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-
-<head>
-    <!-- bare minimum css to render above the fold content.-->
-    <style>
+    <head>
+        <!-- bare minimum css to render above the fold content.-->
+        <!-- bare minimum css to render above the fold content.-->
+<style>
         body {
             margin: 0;
             width: 100%;
+        }
+
+        #content-curtain {
+            visibility: hidden;
         }
 
         .cover-page {
@@ -79,8 +83,7 @@
             display: none;
         }
     </style>
-
-    <script>
+        <script>
     document.documentElement.classList.remove("no-js");
     document.documentElement.classList.add("js");
 </script>
@@ -98,18 +101,25 @@
 <script>
 
 </script>
-    <meta property="og:url" content="https://ratlaf.github.io///content/2015/08/15/youre-right-but-still.html" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="You're Right, But Still" />
-    <meta property="og:description" content="A man has a long-overdue conversation with his beer. It's kind of an intervention—in reverse." />
-    <meta property="og:image" content="https://ratlaf.github.io//images/medium/coors.jpg" />
-    <meta property="fb:app_id" content="466074093735144" />
-
-</head>
-
-<body>
-    <div class="main-container">
-        <div id="navbar" class="navbar sticky nav-hide">
+        <meta property="og:url" content="https://ratlaf.github.io///content/2015/08/15/youre-right-but-still.html" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="You're Right, But Still" />
+        <meta property="og:description" content="A man has a long-overdue conversation with his beer. It's kind of an intervention—in reverse." />
+        <meta property="og:image" content="https://ratlaf.github.io//images/medium/coors.jpg" />
+        <meta property="fb:app_id" content="466074093735144" />
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="cover-page">
+    <div class="cover-image-initial"></div>
+    <div class="cover-image-final"></div>  
+    <h1 id="cover-title" class="cover-title">You're Right, But Still</h1>
+</div>
+<div id='content-curtain'>
+    
+    
+    
+    <div id="navbar" class="navbar sticky nav-hide">
 	<div class="nav-wrapper">
 		<div class="container-medium main-nav">
 			<span>
@@ -148,19 +158,11 @@
 <a href="#footer-nav-home" id="tab-nav" class="tab-nav">
 	<span>skip to navigation</span>
 </a>
- 
-        <div class="cover-page">
-    <div class="cover-image-initial"></div>
-    <div class="cover-image-final"></div>  
-    <h1 id="cover-title" class="cover-title">You're Right, But Still</h1>
-</div>
-
-
-
-<div class="story-container container-small">
-    
-    <div id="story" class="story" data-story-number="1">
-        <p><strong>American Male:</strong> Okay, Coors, so it's cool about those twins. I mean yeah, I like twins. Cheerleaders are good too, I guess.</p>
+         
+    <div class="story-container container-small">
+        
+        <div id="story" class="story" data-story-number="1">
+            <p><strong>American Male:</strong> Okay, Coors, so it's cool about those twins. I mean yeah, I like twins. Cheerleaders are good too, I guess.</p>
 
 <p><strong>Coors Beer:</strong> Twins, right? And cheerleaders! Fuckin'-a!</p>
 
@@ -220,16 +222,16 @@
 
 <p><strong>Coors Beer:</strong> Great.</p>
 
-    </div>
+        </div>
 
-    <div class="footnote-collection" data-footnote-collection="1">
-        <ul class="footnotes"></ul>
-    </div>
+        <div class="footnote-collection" data-footnote-collection="1">
+            <ul class="footnotes"></ul>
+        </div>
 
-    
-</div>
-<div class="social-buttons-container container-small">
-    
+        
+    </div>
+    <div class="social-buttons-container container-small">
+        
 
 
 <div class="socialButtons">
@@ -257,9 +259,9 @@
 
 
             
-</div>
-<div class="keep-reading-container container-small">
-    <ol id="keep-reading" class="story-menu">
+    </div>
+    <div class="keep-reading-container container-small">
+        <ol id="keep-reading" class="story-menu">
     
     <li class="story-quaternary"><article class="story-summary summary-small" data-slug="The Demonist">
 	<a href="/content/2015/10/10/the-demonist.html">
@@ -352,17 +354,16 @@
 </article></li>
     
 </ol>        
-</div>
- 
-        <div class="container-small">
-            <div id="footer-nav" class="footer-nav">
+    </div>
+    <div class="container-small">
+        <div id="footer-nav" class="footer-nav">
     <a id="footer-nav-home" href="/">home</a>
     <a href="/">stories</a>
     <a href="/blog">blog</a>
     <a href="/contact">contact</a>
     <a href="/search">search</a>
 </div>
-            <footer>
+        <footer>
     <div class="footer-meta">
         
             <h1>You're Right, But Still</h1>            
@@ -384,95 +385,100 @@
     var currentTime = new Date();
     document.getElementsByClassName('copyright-date')[0].innerHTML = currentTime.getFullYear();
 </script>
-        </div>
     </div>
-    <script>
-        var getCoverImage = function () {
-            var img;
-            var resizeId;
+</div>
+ 
+        </div>
+        <script>
+    var getCoverImage = function () {
+        var img;
+        var resizeId;
 
-            // Quit early if older browser (e.g. IE8).
-            if (!('addEventListener' in window)) {
-                return;
-            }
-
-            var init = function(){
-                img = new Image();
-
-                var backgroundImage = window.getComputedStyle(document.body,':after').getPropertyValue('content');
-                img.src = backgroundImage.replace(/['"]+/g, '');
-                // Assign an onLoad handler to the dummy image *before* assigning the src
-                img.onload = function () {
-                    var $coverImageInitial = document.getElementsByClassName('cover-image-initial')[0];
-                    var $coverImageFinal = document.getElementsByClassName('cover-image-final')[0];
-
-                    $coverImageFinal.style.backgroundImage = 'url(' + img.src + ')';
-                    //$coverImageInitial.style.display = "none";
-                };
-            }
-
-            init();
-            window.addEventListener('resize', function(){
-                clearTimeout(resizeId);
-                resizeId = setTimeout(function(){
-                    init();
-                }, 150);
-            }, true);
+        // Quit early if older browser (e.g. IE8).
+        if (!('addEventListener' in window)) {
+            return;
         }
-        getCoverImage();
-    </script>
-    
-    <!-- inject:js -->
+
+        var init = function(){
+            img = new Image();
+
+            var backgroundImage = window.getComputedStyle(document.body,':after').getPropertyValue('content');
+            img.src = backgroundImage.replace(/['"]+/g, '');
+            // Assign an onLoad handler to the dummy image *before* assigning the src
+            img.onload = function () {
+                var $coverImageInitial = document.getElementsByClassName('cover-image-initial')[0];
+                var $coverImageFinal = document.getElementsByClassName('cover-image-final')[0];
+
+                $coverImageFinal.style.backgroundImage = 'url(' + img.src + ')';
+                //$coverImageInitial.style.display = "none";
+            };
+        }
+
+        init();
+        window.addEventListener('resize', function(){
+            clearTimeout(resizeId);
+            resizeId = setTimeout(function(){
+                init();
+            }, 150);
+        }, true);
+    }
+    getCoverImage();
+</script>
+        <!-- inject:js -->
 <script src="/javascript-combined/znet.js"></script>
 <!-- endinject -->
-
-    <script>
-        ZnetUI.lazyLoadCSS('https://ratlaf.github.io//css/story.css', {}, function(){
-            ZnetUI.titleFill(
-                'cover-title', 
-                {
-                    paddingX: 10,
-                    yNudgeDown: 0,
-                    googleVHFix: true
+        <script>
+            ZnetUI.lazyLoadCSS('https://ratlaf.github.io//css/story.css', {}, function(){
+                ZnetUI.titleFill(
+                    'cover-title', 
+                    {
+                        paddingX: 10,
+                        yNudgeDown: 0,
+                        googleVHFix: true
+                    }
+                );
+                ZnetUI.titleFill(
+                    'story-title',
+                    {
+                        paddingX: 10,
+                        titleAlignment: "center",
+                        yNudgeDown: 0
+                    }
+                );
+                ZnetUI.footnotes(
+                    'footnote-collection',
+                    {
+                        nudge: -11
+                    }
+                );
+                ZnetUI.curtain(
+                    ['content-curtain'],
+                    {},
+                    function(){
+                        console.log('curtain-callback');
+                    }
+                )
+            });
+            
+            ZnetUI.nav('navbar', 
+                {   
+                    minScrollDown: window.innerHeight, 
+                    coverPageHome:'full-screen-home',
+                    tabNav: 'tab-nav'
                 }
             );
-            ZnetUI.titleFill(
-                'story-title',
+            ZnetUI.TOC(
                 {
-                    paddingX: 10,
-                    titleAlignment: "center",
-                    yNudgeDown: 0
+                    navHeight: 60
                 }
             );
-            ZnetUI.footnotes(
-                'footnote-collection',
+            ZnetUI.lazyLoadImages(
+                'lazy-image', 
                 {
-                    nudge: -11
+                    buffer: 500
                 }
-            )
-        });
-        
-        ZnetUI.nav('navbar', 
-            {   
-                minScrollDown: window.innerHeight, 
-                coverPageHome:'full-screen-home',
-                tabNav: 'tab-nav'
-            }
-        );
-        ZnetUI.TOC(
-            {
-                navHeight: 60
-            }
-        );
-        ZnetUI.lazyLoadImages(
-            'lazy-image', 
-            {
-                buffer: 500
-            }
-        );
-        ZnetUI.lazyLoadCSS('https://ratlaf.github.io//css/fontello.css');
-        
-    </script>
-</body>
-
+            );
+            ZnetUI.lazyLoadCSS('https://ratlaf.github.io//css/fontello.css');
+        </script>
+    </body>
 </html>

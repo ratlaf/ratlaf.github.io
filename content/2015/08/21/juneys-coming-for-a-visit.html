@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-
-<head>
-    <!-- bare minimum css to render above the fold content.-->
-    <style>
+    <head>
+        <!-- bare minimum css to render above the fold content.-->
+        <!-- bare minimum css to render above the fold content.-->
+<style>
         body {
             margin: 0;
             width: 100%;
+        }
+
+        #content-curtain {
+            visibility: hidden;
         }
 
         .cover-page {
@@ -79,8 +83,7 @@
             display: none;
         }
     </style>
-
-    <script>
+        <script>
     document.documentElement.classList.remove("no-js");
     document.documentElement.classList.add("js");
 </script>
@@ -98,18 +101,25 @@
 <script>
 
 </script>
-    <meta property="og:url" content="https://ratlaf.github.io///content/2015/08/21/juneys-coming-for-a-visit.html" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="Juney's Coming For A Visit" />
-    <meta property="og:description" content="George's daughter will be in town for Christmas, Alfred isn't as racist as he sounds and Javier's cousin is being deported." />
-    <meta property="og:image" content="https://ratlaf.github.io//images/medium/chicken.jpg" />
-    <meta property="fb:app_id" content="466074093735144" />
-
-</head>
-
-<body>
-    <div class="main-container">
-        <div id="navbar" class="navbar sticky nav-hide">
+        <meta property="og:url" content="https://ratlaf.github.io///content/2015/08/21/juneys-coming-for-a-visit.html" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Juney's Coming For A Visit" />
+        <meta property="og:description" content="George's daughter will be in town for Christmas, Alfred isn't as racist as he sounds and Javier's cousin is being deported." />
+        <meta property="og:image" content="https://ratlaf.github.io//images/medium/chicken.jpg" />
+        <meta property="fb:app_id" content="466074093735144" />
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="cover-page">
+    <div class="cover-image-initial"></div>
+    <div class="cover-image-final"></div>  
+    <h1 id="cover-title" class="cover-title">Juney's Coming For A Visit</h1>
+</div>
+<div id='content-curtain'>
+    
+    
+    
+    <div id="navbar" class="navbar sticky nav-hide">
 	<div class="nav-wrapper">
 		<div class="container-medium main-nav">
 			<span>
@@ -148,19 +158,11 @@
 <a href="#footer-nav-home" id="tab-nav" class="tab-nav">
 	<span>skip to navigation</span>
 </a>
- 
-        <div class="cover-page">
-    <div class="cover-image-initial"></div>
-    <div class="cover-image-final"></div>  
-    <h1 id="cover-title" class="cover-title">Juney's Coming For A Visit</h1>
-</div>
-
-
-
-<div class="story-container container-small">
-    
-    <div id="story" class="story" data-story-number="1">
-        <p>A bell over the diner's door rang as George walked in.  The sound, Pavlovian, reminded him to remove his baseball cap.</p>
+         
+    <div class="story-container container-small">
+        
+        <div id="story" class="story" data-story-number="1">
+            <p>A bell over the diner's door rang as George walked in.  The sound, Pavlovian, reminded him to remove his baseball cap.</p>
 
 <p>The place had once been a Waffle House, but then a bad economy had landed on the town a few years back, the way locusts alight on a hayfield and that was the end of the Waffle House, along with just about everything else.  Now the place was a no-name joint.  A banner had been hung across the original yellow sign and that banner read 'BREAKFAST,' with no elaboration or lies.  Someone had taken a stab at painting fried eggs and bacon on the windows, and the result got the point across, though the two yolks looked a little like the wide-eyed stare of a distant (and possibly stoned) Aztec god and the stiff bacon parked on the edge of the plate seemed vaguely sexual with its browns and pinks.  A rank of chipped wood-pattern Formica counter tops ran between the dining area and the kitchen.  Coffee machines old enough for Medicaid stood watch over miniature boxes of Frosted Flakes.  The juke box had broken down, but no one had the heart to haul it away.  A diner is a lesser place with no jukebox.  That said, no one longed for the days when it could still play 'A Waffle House Christmas' either.</p>
 
@@ -284,16 +286,16 @@
 
 <p>“So, anyway, Juney’s coming,” George said.</p>
 
-    </div>
+        </div>
 
-    <div class="footnote-collection" data-footnote-collection="1">
-        <ul class="footnotes"></ul>
-    </div>
+        <div class="footnote-collection" data-footnote-collection="1">
+            <ul class="footnotes"></ul>
+        </div>
 
-    
-</div>
-<div class="social-buttons-container container-small">
-    
+        
+    </div>
+    <div class="social-buttons-container container-small">
+        
 
 
 <div class="socialButtons">
@@ -321,9 +323,9 @@
 
 
             
-</div>
-<div class="keep-reading-container container-small">
-    <ol id="keep-reading" class="story-menu">
+    </div>
+    <div class="keep-reading-container container-small">
+        <ol id="keep-reading" class="story-menu">
     
     <li class="story-quaternary"><article class="story-summary summary-small" data-slug="The Demonist">
 	<a href="/content/2015/10/10/the-demonist.html">
@@ -416,17 +418,16 @@
 </article></li>
     
 </ol>        
-</div>
- 
-        <div class="container-small">
-            <div id="footer-nav" class="footer-nav">
+    </div>
+    <div class="container-small">
+        <div id="footer-nav" class="footer-nav">
     <a id="footer-nav-home" href="/">home</a>
     <a href="/">stories</a>
     <a href="/blog">blog</a>
     <a href="/contact">contact</a>
     <a href="/search">search</a>
 </div>
-            <footer>
+        <footer>
     <div class="footer-meta">
         
             <h1>Juney's Coming For A Visit</h1>            
@@ -448,95 +449,100 @@
     var currentTime = new Date();
     document.getElementsByClassName('copyright-date')[0].innerHTML = currentTime.getFullYear();
 </script>
-        </div>
     </div>
-    <script>
-        var getCoverImage = function () {
-            var img;
-            var resizeId;
+</div>
+ 
+        </div>
+        <script>
+    var getCoverImage = function () {
+        var img;
+        var resizeId;
 
-            // Quit early if older browser (e.g. IE8).
-            if (!('addEventListener' in window)) {
-                return;
-            }
-
-            var init = function(){
-                img = new Image();
-
-                var backgroundImage = window.getComputedStyle(document.body,':after').getPropertyValue('content');
-                img.src = backgroundImage.replace(/['"]+/g, '');
-                // Assign an onLoad handler to the dummy image *before* assigning the src
-                img.onload = function () {
-                    var $coverImageInitial = document.getElementsByClassName('cover-image-initial')[0];
-                    var $coverImageFinal = document.getElementsByClassName('cover-image-final')[0];
-
-                    $coverImageFinal.style.backgroundImage = 'url(' + img.src + ')';
-                    //$coverImageInitial.style.display = "none";
-                };
-            }
-
-            init();
-            window.addEventListener('resize', function(){
-                clearTimeout(resizeId);
-                resizeId = setTimeout(function(){
-                    init();
-                }, 150);
-            }, true);
+        // Quit early if older browser (e.g. IE8).
+        if (!('addEventListener' in window)) {
+            return;
         }
-        getCoverImage();
-    </script>
-    
-    <!-- inject:js -->
+
+        var init = function(){
+            img = new Image();
+
+            var backgroundImage = window.getComputedStyle(document.body,':after').getPropertyValue('content');
+            img.src = backgroundImage.replace(/['"]+/g, '');
+            // Assign an onLoad handler to the dummy image *before* assigning the src
+            img.onload = function () {
+                var $coverImageInitial = document.getElementsByClassName('cover-image-initial')[0];
+                var $coverImageFinal = document.getElementsByClassName('cover-image-final')[0];
+
+                $coverImageFinal.style.backgroundImage = 'url(' + img.src + ')';
+                //$coverImageInitial.style.display = "none";
+            };
+        }
+
+        init();
+        window.addEventListener('resize', function(){
+            clearTimeout(resizeId);
+            resizeId = setTimeout(function(){
+                init();
+            }, 150);
+        }, true);
+    }
+    getCoverImage();
+</script>
+        <!-- inject:js -->
 <script src="/javascript-combined/znet.js"></script>
 <!-- endinject -->
-
-    <script>
-        ZnetUI.lazyLoadCSS('https://ratlaf.github.io//css/story.css', {}, function(){
-            ZnetUI.titleFill(
-                'cover-title', 
-                {
-                    paddingX: 10,
-                    yNudgeDown: 0,
-                    googleVHFix: true
+        <script>
+            ZnetUI.lazyLoadCSS('https://ratlaf.github.io//css/story.css', {}, function(){
+                ZnetUI.titleFill(
+                    'cover-title', 
+                    {
+                        paddingX: 10,
+                        yNudgeDown: 0,
+                        googleVHFix: true
+                    }
+                );
+                ZnetUI.titleFill(
+                    'story-title',
+                    {
+                        paddingX: 10,
+                        titleAlignment: "center",
+                        yNudgeDown: 0
+                    }
+                );
+                ZnetUI.footnotes(
+                    'footnote-collection',
+                    {
+                        nudge: -11
+                    }
+                );
+                ZnetUI.curtain(
+                    ['content-curtain'],
+                    {},
+                    function(){
+                        console.log('curtain-callback');
+                    }
+                )
+            });
+            
+            ZnetUI.nav('navbar', 
+                {   
+                    minScrollDown: window.innerHeight, 
+                    coverPageHome:'full-screen-home',
+                    tabNav: 'tab-nav'
                 }
             );
-            ZnetUI.titleFill(
-                'story-title',
+            ZnetUI.TOC(
                 {
-                    paddingX: 10,
-                    titleAlignment: "center",
-                    yNudgeDown: 0
+                    navHeight: 60
                 }
             );
-            ZnetUI.footnotes(
-                'footnote-collection',
+            ZnetUI.lazyLoadImages(
+                'lazy-image', 
                 {
-                    nudge: -11
+                    buffer: 500
                 }
-            )
-        });
-        
-        ZnetUI.nav('navbar', 
-            {   
-                minScrollDown: window.innerHeight, 
-                coverPageHome:'full-screen-home',
-                tabNav: 'tab-nav'
-            }
-        );
-        ZnetUI.TOC(
-            {
-                navHeight: 60
-            }
-        );
-        ZnetUI.lazyLoadImages(
-            'lazy-image', 
-            {
-                buffer: 500
-            }
-        );
-        ZnetUI.lazyLoadCSS('https://ratlaf.github.io//css/fontello.css');
-        
-    </script>
-</body>
-
+            );
+            ZnetUI.lazyLoadCSS('https://ratlaf.github.io//css/fontello.css');
+        </script>
+    </body>
 </html>
