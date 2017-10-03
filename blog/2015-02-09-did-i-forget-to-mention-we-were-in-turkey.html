@@ -10,7 +10,7 @@
 <style>
     .body-curtain, .title-curtain {
         opacity: 0;
-        transition: opacity .05s linear;
+        transition: opacity 3s linear;
     }
 </style>
 <meta charset="utf-8" />
@@ -26,43 +26,9 @@
 <script>
 
 </script>
-        <link rel="stylesheet" href="https://ratlaf.github.io//css/home.css">
     </head>
     <body>
         <div class="main-container" id="page">
-            <div class="navbar sticky">
-    <div class="nav-wrapper">
-	<div class="container-medium main-nav">
-		<span>
-			<a href="/" class="site-logo">
-				ZB
-			</a>
-		</span>
-		<span class="nav-button">
-			<a href="https://ratlaf.github.io/">
-				stories
-			</a>
-		</span>
-		<span class="nav-button">
-			<a  href="https://ratlaf.github.io//blog">
-				blog
-			</a>
-		</span>
-		<span class="nav-button">
-			<a href="https://ratlaf.github.io//contact">
-				contact
-			</a>
-		</span>
-		<span class="nav-button">
-			<a href="https://ratlaf.github.io//search">
-				search
-			</a>
-		</span>
-	</div>
-</div>
-
-</div>
-
             <div class="blog-entry">
     <div class="container-medium">
         <h2 class="title">Did I Forget To Mention We Were In Turkey?</h2>        
@@ -232,46 +198,30 @@
 </ol>
 </div>
 
-            <div class="container-medium">
-                <footer>
-    <div class="footer-meta">
-        
-            <h1>Did I Forget To Mention We Were In Turkey?</h1>            
-        
-        <p>
-            Copyright © <span class="copyright-date">2017</span> Zachary Bell - All Rights Reserved. Except where otherwise noted,
-            contents of this site including text and media may not be reproduced without prior
-            written consent.
-        </p>
-        <p>
-            
-        </p>
-        <span class="pw__vs">vs:</span><span class="pw__sm">sm:</span><span class="pw__md">md:</span><span class="pw__lg">lg:</span><span>107</span>
-    </div>
-</footer>
-<script>
-    var currentTime = new Date();
-    document.getElementsByClassName('copyright-date')[0].innerHTML = currentTime.getFullYear();
-</script>                    
-            </div>
         </div>
 
         <!-- inject:js -->
 <script src="/javascript-combined/znet.js"></script>
 <!-- endinject -->
-
-        <script src="/external_components/elasticlunr.js-master/elasticlunr.min.js"></script>
         <script>
-            ZnetUI.titleFill(
-                'story-title', 
-                {
-                    paddingX: 10,
-                }
-            );
+            ZnetUI.lazyLoadCSS('https://ratlaf.github.io//css/story.css', {}, function(){
+                ZnetUI.fontWatch('Lora', {}, function(){
+                        ZnetUI.titleFill(
+                        'story-title', 
+                        {
+                            paddingX: 10,
+                        },
+                        function(){
+                            // reveal the title. 
+                            ZnetUI.curtain('body-curtain');
+                        }
+                    );
+                });
+            });
             ZnetUI.lazyLoadImages(
                 'lazy-image', 
                 {
-                    buffer: 500
+                    buffer: 1000
                 }
             );
             ZnetUI.lazyLoadCSS(

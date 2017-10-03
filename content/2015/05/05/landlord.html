@@ -30,12 +30,14 @@
         z-index: 0;
     }
     .cover-image-final {
-        position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
         z-index: 1;
+        opacity: 0;
+        position: absolute;
+        transition: opacity 1s linear;
     }
     .cover-image-intial{
         display: none;
@@ -87,7 +89,7 @@
 <style>
     .body-curtain, .title-curtain {
         opacity: 0;
-        transition: opacity .05s linear;
+        transition: opacity 3s linear;
     }
 </style>
 <meta charset="utf-8" />
@@ -362,16 +364,16 @@
  
     </div>
     <script>
-    var getCoverImage = function () {
+    var getCoverImage = function (callback) {
         var img;
         var resizeId;
-
+        var callback = callback;
         // Quit early if older browser (e.g. IE8).
         if (!('addEventListener' in window)) {
             return;
         }
 
-        var init = function(){
+        var init = function(callback){
             img = new Image();
 
             var backgroundImage = window.getComputedStyle(document.body,':after').getPropertyValue('content');
@@ -380,21 +382,23 @@
             img.onload = function () {
                 var $coverImageInitial = document.getElementsByClassName('cover-image-initial')[0];
                 var $coverImageFinal = document.getElementsByClassName('cover-image-final')[0];
-
                 $coverImageFinal.style.backgroundImage = 'url(' + img.src + ')';
-                //$coverImageInitial.style.display = "none";
+                $coverImageFinal.style.opacity = 1;
+                callback();
             };
         }
 
-        init();
-        window.addEventListener('resize', function(){
+        init(callback);
+        window.addEventListener('resize', function(e){
             clearTimeout(resizeId);
             resizeId = setTimeout(function(){
-                init();
+                init(callback);
             }, 150);
         }, true);
     }
-    getCoverImage();
+    getCoverImage(function(){
+        console.log('coverimagecallback');
+    });
 </script>
 
 <!-- inject:js -->

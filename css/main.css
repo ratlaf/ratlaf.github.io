@@ -1215,8 +1215,7 @@ input:focus, select:focus, textarea:focus {
       text-transform: uppercase;
       font-weight: 800;
       text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-      line-height: 1.2em;
-      opacity: 0; }
+      line-height: 1.2em; }
 .story-summary .info-wrapper .title {
   margin: 0 0 10px 0;
   font-family: "Karla", "Arial", sans-serif;
