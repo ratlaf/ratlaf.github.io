@@ -1,115 +1,18 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
     <head>
-        <!-- bare minimum css to render above the fold content.-->
-<style>
-    #content-curtain {
-        visibility: hidden;
-    }
-
-    .spinner {
-        animation: fadein 5s;
-        -moz-animation: fadein 5s; /* Firefox */
-        -webkit-animation: fadein 5s; /* Safari and Chrome */
-        -o-animation: fadein 5s; /* Opera */
-        margin: 100px auto;
-        width: 50px;
-        height: 40px;
-        text-align: center;
-        font-size: 10px;
-    }
-
-    .spinner>div {
-        background-color: #FF2200;
-        height: 100%;
-        width: 6px;
-        display: inline-block;
-
-        -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
-        animation: sk-stretchdelay 1.2s infinite ease-in-out;
-    }
-
-    .spinner .rect2 {
-        -webkit-animation-delay: -1.1s;
-        animation-delay: -1.1s;
-    }
-
-    .spinner .rect3 {
-        -webkit-animation-delay: -1.0s;
-        animation-delay: -1.0s;
-    }
-
-    .spinner .rect4 {
-        -webkit-animation-delay: -0.9s;
-        animation-delay: -0.9s;
-    }
-
-    .spinner .rect5 {
-        -webkit-animation-delay: -0.8s;
-        animation-delay: -0.8s;
-    }
-
-    @-webkit-keyframes sk-stretchdelay {
-        0%,
-        40%,
-        100% {
-            -webkit-transform: scaleY(0.4)
-        }
-        20% {
-            -webkit-transform: scaleY(1.0)
-        }
-    }
-
-    @keyframes sk-stretchdelay {
-        0%,
-        40%,
-        100% {
-            transform: scaleY(0.4);
-            -webkit-transform: scaleY(0.4);
-        }
-        20% {
-            transform: scaleY(1.0);
-            -webkit-transform: scaleY(1.0);
-        }
-    }
-    @keyframes fadein {
-        from {
-            opacity:0;
-        }
-        to {
-            opacity:1;
-        }
-    }
-    @-moz-keyframes fadein { /* Firefox */
-        from {
-            opacity:0;
-        }
-        to {
-            opacity:1;
-        }
-    }
-    @-webkit-keyframes fadein { /* Safari and Chrome */
-        from {
-            opacity:0;
-        }
-        to {
-            opacity:1;
-        }
-    }
-    @-o-keyframes fadein { /* Opera */
-        from {
-            opacity:0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
-</style>            
+        <meta name="google-site-verification" content="Nt3xy9OgkrDFmMXfylZo0UxQYjoBNsUhVwekitE_1bw" />
+        <meta name="google-site-verification" content="Nt3xy9OgkrDFmMXfylZo0UxQYjoBNsUhVwekitE_1bw" />
         <script>
     document.documentElement.classList.remove("no-js");
     document.documentElement.classList.add("js");
 </script>
-
+<style>
+    .body-curtain, .title-curtain {
+        opacity: 0;
+        transition: opacity .05s linear;
+    }
+</style>
 <meta charset="utf-8" />
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -123,18 +26,11 @@
 <script>
 
 </script>
+        <link rel="stylesheet" href="https://ratlaf.github.io//css/home.css">
     </head>
     <body>
         <div class="main-container" id="page">
-            <div id="loading-spinner" class="spinner">
-                <div class="rect1"></div>
-                <div class="rect2"></div>
-                <div class="rect3"></div>
-                <div class="rect4"></div>
-                <div class="rect5"></div>
-            </div>
-            <div id='content-curtain' class="home-container container-medium">
-    <div class="navbar sticky">
+            <div class="navbar sticky">
     <div class="nav-wrapper">
 	<div class="container-medium main-nav">
 		<span>
@@ -166,13 +62,13 @@
 </div>
 
 </div>
-                
-    <div class="blog-entry">
-        <div class="container-medium">
-            <h2 class="title">An Important Conversation</h2>        
-        </div>
-        <div class="container-small">
-            <p><strong>Scene:</strong> A romantic dinner leads to a conversation of the utmost importance.  This is the sort of intellectual fare that you are missing out on by not marrying me.  Unless, of course, you did marry me.  In which case, you sure are lucky.</p>
+
+            <div class="blog-entry">
+    <div class="container-medium">
+        <h2 class="title">An Important Conversation</h2>        
+    </div>
+    <div class="container-small">
+        <p><strong>Scene:</strong> A romantic dinner leads to a conversation of the utmost importance.  This is the sort of intellectual fare that you are missing out on by not marrying me.  Unless, of course, you did marry me.  In which case, you sure are lucky.</p>
 
 <p><strong>Z:</strong> Would you kill a man for a million dollars?”</p>
 
@@ -212,10 +108,10 @@
 
 <p><strong>Z:</strong> Done.</p>
 
-        </div>
     </div>
-    <div class="container-small">
-        
+</div>
+<div class="container-small">
+    
 
 
 <div class="socialButtons">
@@ -243,7 +139,7 @@
 
 
     
-        <ol id="keep-reading" class="story-menu">
+    <ol id="keep-reading" class="story-menu">
     
     <li class="story-quaternary"><article class="story-summary summary-small" data-slug="The Demonist">
 	<a href="/content/2015/10/10/the-demonist.html">
@@ -336,9 +232,10 @@
 </article></li>
     
 </ol>
-    </div>
-    <div class="container-medium">
-        <footer>
+</div>
+
+            <div class="container-medium">
+                <footer>
     <div class="footer-meta">
         
             <h1>An Important Conversation</h1>            
@@ -358,75 +255,27 @@
     var currentTime = new Date();
     document.getElementsByClassName('copyright-date')[0].innerHTML = currentTime.getFullYear();
 </script>                    
-    </div>
-</div>
-
-
+            </div>
         </div>
-        <script>
-    var getCoverImage = function () {
-        var img;
-        var resizeId;
 
-        // Quit early if older browser (e.g. IE8).
-        if (!('addEventListener' in window)) {
-            return;
-        }
-
-        var init = function(){
-            img = new Image();
-
-            var backgroundImage = window.getComputedStyle(document.body,':after').getPropertyValue('content');
-            img.src = backgroundImage.replace(/['"]+/g, '');
-            // Assign an onLoad handler to the dummy image *before* assigning the src
-            img.onload = function () {
-                var $coverImageInitial = document.getElementsByClassName('cover-image-initial')[0];
-                var $coverImageFinal = document.getElementsByClassName('cover-image-final')[0];
-
-                $coverImageFinal.style.backgroundImage = 'url(' + img.src + ')';
-                //$coverImageInitial.style.display = "none";
-            };
-        }
-
-        init();
-        window.addEventListener('resize', function(){
-            clearTimeout(resizeId);
-            resizeId = setTimeout(function(){
-                init();
-            }, 150);
-        }, true);
-    }
-    getCoverImage();
-</script>        
         <!-- inject:js -->
 <script src="/javascript-combined/znet.js"></script>
 <!-- endinject -->
+
+        <script src="/external_components/elasticlunr.js-master/elasticlunr.min.js"></script>
         <script>
-            ZnetUI.lazyLoadCSS('https://ratlaf.github.io//css/home.css', {}, function(){
-                ZnetUI.titleFill(
-                    'story-title', 
-                    {
-                        paddingX: 10,
-                    }
-                );
-                ZnetUI.lazyLoadImages(
-                    'lazy-image', 
-                    {
-                        buffer: 1000
-                    }
-                );
-                ZnetUI.curtain(
-                    ['content-curtain'],
-                    {
-                        removeElements: ['loading-spinner']
-                    },
-                    function(){
-                        console.log('curtain-callback');
-                    }
-                )
-            });
-
-
+            ZnetUI.titleFill(
+                'story-title', 
+                {
+                    paddingX: 10,
+                }
+            );
+            ZnetUI.lazyLoadImages(
+                'lazy-image', 
+                {
+                    buffer: 500
+                }
+            );
             ZnetUI.lazyLoadCSS(
                 'https://ratlaf.github.io//css/fontello.css'
             );

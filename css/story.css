@@ -363,8 +363,6 @@ html.no-js .cover-page {
     font-family: "Karla", "Arial", sans-serif;
     margin: 20px 0;
     font-size: 3em; }
-  .story p {
-    font-family: "Lora", "Palatino", "Georgia", serif; }
   .story p:first-child:first-letter {
     float: left;
     font-size: 5.35em;
