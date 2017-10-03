@@ -10,7 +10,7 @@
 <style>
     .body-curtain, .title-curtain {
         opacity: 0;
-        transition: opacity .25s linear;
+        transition: opacity .15s linear;
     }
 </style>
 <meta charset="utf-8" />
@@ -26,6 +26,7 @@
 <script>
 
 </script>
+        <link rel="stylesheet" type="text/css" href="https://ratlaf.github.io//css/story.css">
     </head>
     <body>
         <div class="main-container" id="page">
@@ -188,24 +189,18 @@
 <script src="/javascript-combined/znet.js"></script>
 <!-- endinject -->
         <script>
-            ZnetUI.lazyLoadCSS('https://ratlaf.github.io//css/story.css', {}, function(){
-                ZnetUI.fontWatch('Lora', {}, function(){
-                        ZnetUI.titleFill(
-                        'story-title', 
-                        {
-                            paddingX: 10,
-                        },
-                        function(){
-                            // reveal the title. 
-                            ZnetUI.curtain('body-curtain');
-                        }
-                    );
-                });
+            ZnetUI.fontWatch('Lora', {}, function(){
+                ZnetUI.titleFill(
+                    'story-title', 
+                    {
+                        paddingX: 10,
+                    }
+                );
             });
             ZnetUI.lazyLoadImages(
                 'lazy-image', 
                 {
-                    buffer: 1000
+                    buffer: 500
                 }
             );
             ZnetUI.lazyLoadCSS(

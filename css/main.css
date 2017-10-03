@@ -1200,6 +1200,7 @@ input:focus, select:focus, textarea:focus {
 .story-summary .cover-wrapper {
   border-bottom: 2px solid white; }
   .story-summary .cover-wrapper .cover-image {
+    background-color: #D9D9D9;
     background-size: contain;
     position: relative;
     background-repeat: no-repeat;
@@ -1215,7 +1216,9 @@ input:focus, select:focus, textarea:focus {
       text-transform: uppercase;
       font-weight: 800;
       text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-      line-height: 1.2em; }
+      line-height: 1.2em;
+      opacity: 0;
+      transition: opacity .15s linear; }
 .story-summary .info-wrapper .title {
   margin: 0 0 10px 0;
   font-family: "Karla", "Arial", sans-serif;
