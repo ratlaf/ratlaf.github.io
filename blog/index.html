@@ -30,7 +30,40 @@
     </head>
     <body>
         <div class="main-container" id="page">
-            <div class="blog">
+            <div class="navbar sticky">
+    <div class="nav-wrapper">
+	<div class="container-medium main-nav">
+		<span>
+			<a href="/" class="site-logo">
+				ZB
+			</a>
+		</span>
+		<span class="nav-button">
+			<a href="https://ratlaf.github.io/">
+				stories
+			</a>
+		</span>
+		<span class="nav-button">
+			<a  href="https://ratlaf.github.io//blog">
+				blog
+			</a>
+		</span>
+		<span class="nav-button">
+			<a href="https://ratlaf.github.io//contact">
+				contact
+			</a>
+		</span>
+		<span class="nav-button">
+			<a href="https://ratlaf.github.io//search">
+				search
+			</a>
+		</span>
+	</div>
+</div>
+
+</div>
+
+<div class="container-medium">
     <div class="blogHeader">
         <h1 class="banner">blog</h1>
         <div class="tagline">Probably Some Words</div>
@@ -88,7 +121,26 @@
         
     </div>
 </div>
-
+<div class="container-small">
+    <footer>
+    <div class="footer-meta">
+        
+        <p>
+            Copyright © <span class="copyright-date">2017</span> Zachary Bell - All Rights Reserved. Except where otherwise noted,
+            contents of this site including text and media may not be reproduced without prior
+            written consent.
+        </p>
+        <p>
+            
+        </p>
+        <span class="pw__vs">vs:</span><span class="pw__sm">sm:</span><span class="pw__md">md:</span><span class="pw__lg">lg:</span><span>107</span>
+    </div>
+</footer>
+<script>
+    var currentTime = new Date();
+    document.getElementsByClassName('copyright-date')[0].innerHTML = currentTime.getFullYear();
+</script>                    
+</div>
         </div>
 
         <!-- inject:js -->

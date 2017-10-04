@@ -1664,9 +1664,12 @@ body.js .ss-form-container {
     border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray; }
 
+.blog {
+  padding: 20px; }
+
 .blog-summary {
   border-bottom: 1px solid #D9D9D9;
-  padding: 20px 0;
+  padding: 20px;
   text-align: center; }
   .blog-summary:hover {
     background-color: #fcfcfc; }
