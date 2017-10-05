@@ -168,7 +168,7 @@
     <div class="story-container container-small">
         
         <div id="story" class="story" data-story-number="1">
-            <p>The dinosaurs retired the field. Hole-hiding, seed-snuffling mammals poked their snouts into the ash-filled sky and realized they had accidentally inherited everything.</p>
+            <p>The dinosaurs retired the field. Hole-hiding, seed-snuffling mammals poked their snouts into the ash-filled<sup><a class="footLink--upper" id="footLink--upper_1" href="#footLink--lower_1" data-footnote-number="1">1</a></sup> sky and realized they had accidentally inherited everything.</p>
 
 <p>There was a race to fill the void opened by the departed dinosaurs and the sloths won. This was on the other side of the ice age. The sloths were not the fastest, not by any measure, but the race doesn't always honor the fastest. The opposite, in fact. Ask a cheetah about lions. No. The sloths were not fast--they were sloths--but they were the largest. At least some of them. Up on their haunches, these mega-sloths were so tall that only trees could compete with their height. Nothing hunted them. Nothing even tried. Gargantuan, the ends of their forepaws draped with dagger-length claws, sloths had come to the apex of their particular pyramid. They ate what they liked, went where whim took them, mated infrequently because their young almost never died.&lt;!-- more --&gt;</p>
 
@@ -199,7 +199,7 @@
         </div>
     
         <div class="footnote-collection" data-footnote-collection="1">
-            <ul class="footnotes"></ul>
+            <ul class="footnotes"><li class="footnote" id="footnote_1" data-footnote-number="1"><ul class="footnoteFields"><li class="footnoteNumber"><a class="footLink--lower" id="footLink--lower_1" href="#footLink--upper_1" data-footnote-number="1">1</a></li><li class="footnoteContent">Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote! Here comes a long ol' footnote!</li></ul></li></ul>
         </div>
     
         
@@ -428,6 +428,14 @@
                     ZnetUI.curtain('title-curtain');
                 }
             );
+            ZnetUI.titleFill(
+                'story-title',
+                {
+                    paddingX: 10,
+                    titleAlignment: "center",
+                    yNudgeDown: 0
+                }
+            );
 
             // do the footnotes (which depend on the font being loaded or they will be a bit
             // misaligned)
@@ -439,14 +447,6 @@
             )
         });
     });
-    ZnetUI.titleFill(
-        'story-title',
-        {
-            paddingX: 10,
-            titleAlignment: "center",
-            yNudgeDown: 0
-        }
-    );
     ZnetUI.nav('navbar', 
         {   
             minScrollDown: window.innerHeight, 

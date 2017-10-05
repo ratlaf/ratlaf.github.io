@@ -114,6 +114,13 @@ input:focus, select:focus, textarea:focus {
   background: rgba(255, 34, 0, 0.99);
   color: white; }
 
+.disable-touch {
+  touch-action: none; }
+
+.disable-body-scroll {
+  height: 100% !important;
+  overflow: hidden !important; }
+
 .main-container {
   position: relative;
   min-height: 100vh; }

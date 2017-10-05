@@ -108,20 +108,21 @@
                     imageURL: 'https://ratlaf.github.io/'
                 },
                 function(){
-                    ZnetUI.titleFill(
-                        'story-title',
-                        {
-                            paddingX: 10,
-                            titleAlignment: "center",
-                            yNudgeDown: 0
-                        },
-                        function(){
-                            ZnetUI.curtain('body-curtain');
-                        }
-                    );
+                    ZnetUI.fontWatch('Lora', {}, function(){
+                        ZnetUI.titleFill(
+                            'story-title',
+                            {
+                                paddingX: 10,
+                                titleAlignment: "center",
+                                yNudgeDown: 0
+                            },
+                            function(){
+                                ZnetUI.curtain('body-curtain');
+                            }
+                        );
+                    });
                 }
             );
-
         </script>
     </body>
 </html>

@@ -1115,6 +1115,13 @@ input:focus, select:focus, textarea:focus {
   background: rgba(255, 34, 0, 0.99);
   color: white; }
 
+.disable-touch {
+  touch-action: none; }
+
+.disable-body-scroll {
+  height: 100% !important;
+  overflow: hidden !important; }
+
 .main-container {
   position: relative;
   min-height: 100vh; }
@@ -1918,9 +1925,6 @@ footer {
     text-transform: uppercase;
     font-family: "Karla", "Arial", sans-serif; }
 
-.disable-touch {
-  touch-action: none; }
-
 body.locked {
   overflow: hidden;
   position: fixed; }
@@ -1937,10 +1941,10 @@ body.locked {
 
 #mobile-footnote {
   position: fixed;
-  max-height: 300px;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  top: 20px;
   background: #FF2200;
   z-index: 10;
   color: white;

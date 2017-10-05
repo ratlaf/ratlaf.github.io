@@ -460,6 +460,14 @@
                     ZnetUI.curtain('title-curtain');
                 }
             );
+            ZnetUI.titleFill(
+                'story-title',
+                {
+                    paddingX: 10,
+                    titleAlignment: "center",
+                    yNudgeDown: 0
+                }
+            );
 
             // do the footnotes (which depend on the font being loaded or they will be a bit
             // misaligned)
@@ -471,14 +479,6 @@
             )
         });
     });
-    ZnetUI.titleFill(
-        'story-title',
-        {
-            paddingX: 10,
-            titleAlignment: "center",
-            yNudgeDown: 0
-        }
-    );
     ZnetUI.nav('navbar', 
         {   
             minScrollDown: window.innerHeight, 
