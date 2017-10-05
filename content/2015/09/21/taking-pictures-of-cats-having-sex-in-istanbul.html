@@ -10,18 +10,18 @@
         width: 100%;
     }
 
-    .cover-page {
+    .js .cover-page {
         position: relative;
         height: 100vh;            
     }
-    .cover-image-initial, .cover-image-final {
+    .js .cover-image-initial, .js .cover-image-final {
         background-size: cover;
         -moz-background-size: cover;
         /* Firefox 3.6 */
         background-position: center;
         /* Internet Explorer 7/8 */
     }
-    .cover-image-initial {
+    .js .cover-image-initial {
         position: absolute;
         top: 0;
         left: 0;
@@ -29,7 +29,7 @@
         bottom: 0;
         z-index: 0;
     }
-    .cover-image-final {
+    .js .cover-image-final {
         top: 0;
         left: 0;
         right: 0;
@@ -78,7 +78,8 @@
     .navbar,
     .full-screen-home,
     .tab-nav,
-    .cover-page h1 {
+
+    .js .cover-title {
         display: none;
     }
 </style>    
@@ -87,7 +88,7 @@
     document.documentElement.classList.add("js");
 </script>
 <style>
-    .body-curtain, .title-curtain {
+    .js .body-curtain, .js .title-curtain {
         opacity: 0;
         visibility: hidden;
     }

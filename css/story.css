@@ -377,26 +377,26 @@ html.no-js .cover-page {
     padding-top: .1em;
     padding-right: .1em; }
 
-.footnote-collection {
+.js .footnote-collection {
   flex: 1 0 30%;
   font-family: "Lora", "Palatino", "Georgia", serif; }
-  .footnote-collection ul, .footnote-collection ol {
+  .js .footnote-collection ul, .js .footnote-collection ol {
     list-style-type: none;
     margin: 0;
     padding: 0;
     position: relative; }
-    .footnote-collection ul li, .footnote-collection ol li {
+    .js .footnote-collection ul li, .js .footnote-collection ol li {
       line-height: 1.5em; }
-    .footnote-collection ul .desktop-footnote, .footnote-collection ol .desktop-footnote {
+    .js .footnote-collection ul .desktop-footnote, .js .footnote-collection ol .desktop-footnote {
       position: absolute;
       right: 0;
       left: 0; }
-  .footnote-collection .footnoteFields {
+  .js .footnote-collection .footnoteFields {
     border-left: solid 1px #D9D9D9;
     padding: 20px 20px; }
-    .footnote-collection .footnoteFields .footnoteNumber {
+    .js .footnote-collection .footnoteFields .footnoteNumber {
       float: left; }
-    .footnote-collection .footnoteFields .footnoteContent {
+    .js .footnote-collection .footnoteFields .footnoteContent {
       font-size: 1.4em;
       color: #808080; }
 
@@ -654,25 +654,31 @@ body.locked {
     .story-menu .story-tertiary {
       flex: 3 0 30% !important; } }
 
-.story-summary:hover {
+.no-js .story-summary a {
+  color: black; }
+.no-js .story-summary .cover-wrapper .cover-image {
+  background-image: none !important;
+  padding-top: 0 !important; }
+
+.js .story-summary:hover {
   text-decoration: none;
   color: black; }
-.story-summary a {
+.js .story-summary a {
   color: #333333;
   margin: 0;
   padding: 0;
   display: block;
   overflow: hidden; }
-.story-summary .cover-wrapper {
+.js .story-summary .cover-wrapper {
   border-bottom: 2px solid white; }
-  .story-summary .cover-wrapper .cover-image {
+  .js .story-summary .cover-wrapper .cover-image {
     background-color: #D9D9D9;
     background-size: contain;
     position: relative;
     background-repeat: no-repeat;
     height: 0;
     width: 100%; }
-    .story-summary .cover-wrapper .cover-image .story-title {
+    .js .story-summary .cover-wrapper .cover-image .story-title {
       font-size: 6em;
       z-index: 1;
       margin: 0;
@@ -684,11 +690,11 @@ body.locked {
       text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
       line-height: 1.2em;
       opacity: 0; }
-.story-summary .info-wrapper .title {
+.js .story-summary .info-wrapper .title {
   margin: 0 0 10px 0;
   font-family: "Karla", "Arial", sans-serif;
   text-transform: uppercase; }
-.story-summary .info-wrapper .excerpt {
+.js .story-summary .info-wrapper .excerpt {
   line-height: 1.5em;
   font-family: "Karla", "Arial", sans-serif; }
 
