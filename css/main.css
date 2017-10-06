@@ -1329,6 +1329,12 @@ input:focus, select:focus, textarea:focus {
     background-color: white;
     color: #FF2200; }
 
+.no-transition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important; }
+
 .main-nav {
   position: relative;
   z-index: 10;
@@ -1425,12 +1431,16 @@ input:focus, select:focus, textarea:focus {
       color: #545454; }
 
 .js .nav-show {
-  visibility: visible !important;
+  visibility: visible;
   opacity: 1; }
 
 .js .nav-hide {
-  visibility: hidden !important;
+  visibility: hidden;
   opacity: 0; }
+
+.js .never-hide {
+  visibility: visible !important;
+  opacity: 1 !important; }
 
 @media (max-width: 768px) {
   .full-screen-home {
@@ -1619,7 +1629,6 @@ body.locked {
   background: #FF2200;
   z-index: 10;
   color: white;
-  padding: 2em 2em 2em 1.5em;
   -webkit-box-shadow: 0 1px 31px 0 rgba(0, 0, 0, 0.48);
   -moz-box-shadow: 0 1px 31px 0 rgba(0, 0, 0, 0.48);
   box-shadow: 0 1px 31px 0 rgba(0, 0, 0, 0.48);
@@ -1628,10 +1637,19 @@ body.locked {
   transform: translateY(100%);
   -webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
   transition: transform 0.4s ease-in-out, visibility 0s 0.4s; }
+  #mobile-footnote #title {
+    font-size: 20px;
+    padding: 20px 20px 0 20px;
+    font-family: "Karla", "Arial", sans-serif;
+    text-transform: uppercase; }
   #mobile-footnote #content {
     color: white;
-    display: inline;
-    font-size: 1.5em; }
+    display: block;
+    font-size: 1.5em;
+    padding: 20px; }
+    #mobile-footnote #content .superscript {
+      font-size: .83em;
+      vertical-align: super; }
     #mobile-footnote #content a {
       color: white;
       text-decoration: underline;
@@ -1640,7 +1658,8 @@ body.locked {
     position: absolute;
     top: 0;
     right: 0;
-    font-size: 15px; }
+    font-size: 20px;
+    padding: 20px 10px 20px 20px; }
     #mobile-footnote #close:hover {
       cursor: hand;
       outline: 1px solid white; }

@@ -159,6 +159,12 @@ input:focus, select:focus, textarea:focus {
     background-color: white;
     color: #FF2200; }
 
+.no-transition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important; }
+
 .main-nav {
   position: relative;
   z-index: 10;
@@ -255,12 +261,16 @@ input:focus, select:focus, textarea:focus {
       color: #545454; }
 
 .js .nav-show {
-  visibility: visible !important;
+  visibility: visible;
   opacity: 1; }
 
 .js .nav-hide {
-  visibility: hidden !important;
+  visibility: hidden;
   opacity: 0; }
+
+.js .never-hide {
+  visibility: visible !important;
+  opacity: 1 !important; }
 
 @media (max-width: 768px) {
   .full-screen-home {
