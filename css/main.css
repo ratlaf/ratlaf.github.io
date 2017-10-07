@@ -1584,9 +1584,6 @@ body.locked {
 @media (min-width: 992px) {
   .footnoteCollection .footnoteFields .footnoteNumber {
     font-size: 1.4em; } }
-@media screen and (max-height: 375px) {
-  .mobile-footnote {
-    max-height: 200px; } }
 .keep-reading h2 {
   text-align: center;
   text-transform: uppercase;
@@ -1610,60 +1607,6 @@ body.locked {
     font-size: 3.4em;
     padding-top: .12em;
     padding-right: .1em; } }
-#mobile-footnote.open {
-  visibility: visible;
-  -webkit-transform: translateY(0%);
-  transform: translateY(0%);
-  -webkit-transition: -webkit-transform 0.4s ease-in-out;
-  transition: transform 0.4s ease-in-out; }
-
-#mobile-footnote.scrolls {
-  overflow: auto; }
-
-#mobile-footnote {
-  position: fixed;
-  max-height: 300px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #FF2200;
-  z-index: 10;
-  color: white;
-  -webkit-box-shadow: 0 1px 31px 0 rgba(0, 0, 0, 0.48);
-  -moz-box-shadow: 0 1px 31px 0 rgba(0, 0, 0, 0.48);
-  box-shadow: 0 1px 31px 0 rgba(0, 0, 0, 0.48);
-  visibility: hidden;
-  -webkit-transform: translateY(100%);
-  transform: translateY(100%);
-  -webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
-  transition: transform 0.4s ease-in-out, visibility 0s 0.4s; }
-  #mobile-footnote #title {
-    font-size: 20px;
-    padding: 20px 20px 0 20px;
-    font-family: "Karla", "Arial", sans-serif;
-    text-transform: uppercase; }
-  #mobile-footnote #content {
-    color: white;
-    display: block;
-    font-size: 1.5em;
-    padding: 20px; }
-    #mobile-footnote #content .superscript {
-      font-size: .83em;
-      vertical-align: super; }
-    #mobile-footnote #content a {
-      color: white;
-      text-decoration: underline;
-      font-weight: 400; }
-  #mobile-footnote #close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 20px;
-    padding: 20px 10px 20px 20px; }
-    #mobile-footnote #close:hover {
-      cursor: hand;
-      outline: 1px solid white; }
-
 #scroll-down-indicator {
   position: fixed;
   bottom: 0;
@@ -1954,51 +1897,6 @@ body.locked {
   overflow: hidden;
   position: fixed; }
 
-#mobile-footnote.open {
-  visibility: visible;
-  -webkit-transform: translateY(0%);
-  transform: translateY(0%);
-  -webkit-transition: -webkit-transform 0.4s ease-in-out;
-  transition: transform 0.4s ease-in-out; }
-
-#mobile-footnote.scrolls {
-  overflow: auto; }
-
-#mobile-footnote {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  top: 20px;
-  background: #FF2200;
-  z-index: 10;
-  color: white;
-  padding: 2em 2em 2em 1.5em;
-  -webkit-box-shadow: 0 1px 31px 0 rgba(0, 0, 0, 0.48);
-  -moz-box-shadow: 0 1px 31px 0 rgba(0, 0, 0, 0.48);
-  box-shadow: 0 1px 31px 0 rgba(0, 0, 0, 0.48);
-  visibility: hidden;
-  -webkit-transform: translateY(100%);
-  transform: translateY(100%);
-  -webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
-  transition: transform 0.4s ease-in-out, visibility 0s 0.4s; }
-  #mobile-footnote #content {
-    color: white;
-    display: inline;
-    font-size: 1.5em; }
-    #mobile-footnote #content a {
-      color: white;
-      text-decoration: underline;
-      font-weight: 400; }
-  #mobile-footnote #close {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 15px; }
-    #mobile-footnote #close:hover {
-      cursor: hand;
-      outline: 1px solid white; }
-
 #scroll-down-indicator {
   position: fixed;
   bottom: 0;
@@ -2008,6 +1906,33 @@ body.locked {
   font-size: 15px;
   color: white;
   display: none; }
+
+.mobile-footnote {
+  display: block;
+  overflow: hidden;
+  margin: 0 -20px;
+  background-color: #FF2200;
+  color: white;
+  font-size: 14px;
+  font-family: "Karla", "Arial", sans-serif;
+  line-height: 17px;
+  -webkit-box-shadow: inset 0px 0px 19px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: inset 0px 0px 19px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px 0px 19px 0px rgba(0, 0, 0, 0.25);
+  overflow: scroll; }
+  .mobile-footnote .wrapper {
+    padding: 20px 40px;
+    display: block; }
+
+.mobile-footnote-watched {
+  -webkit-transition: max-height .25s;
+  -moz-transition: max-height .25s;
+  -ms-transition: max-height .25s;
+  -o-transition: max-height .25s;
+  transition: max-height .25s; }
+
+.mobile-footnote-closed {
+  max-height: 0; }
 
 .footnoteCollection {
   font-family: "Lora", "Palatino", "Georgia", serif; }
@@ -2058,6 +1983,3 @@ body.locked {
 @media (min-width: 992px) {
   .footnoteCollection .footnoteFields .footnoteNumber {
     font-size: 1.4em; } }
-@media screen and (max-height: 375px) {
-  .mobile-footnote {
-    max-height: 200px; } }
