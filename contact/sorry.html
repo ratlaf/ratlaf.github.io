@@ -187,7 +187,6 @@
         }, true);
     }
     getCoverImage(function(){
-        console.log('coverimagecallback');
     });
 </script>
 
@@ -200,12 +199,11 @@
     ZnetUI.lazyLoadCSS('https://ratlaf.github.io//css/story.css', {}, function(){
 
         // we need the font to load before we can set the title or the footnotes
-        ZnetUI.fontWatch('Lora', {}, function(){
-
+        ZnetUI.fontWatch('Open Sans', {}, function(){
+            console.log('fontWatch callback');
             // once we have the font, we can show the body content
             ZnetUI.curtain('body-curtain');
 
-            // size the title. 
             ZnetUI.titleFill(
                 'cover-title', 
                 {
