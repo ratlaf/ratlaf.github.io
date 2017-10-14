@@ -24,7 +24,7 @@
 <script>
 
 </script>
-        <link rel="stylesheet" type="text/css" href="https://ratlaf.github.io//css/story.css">
+        <link rel="stylesheet" type="text/css" href="https://ratlaf.github.io//css/blog.css">
     </head>
     <body>
         <div class="main-container" id="page">
@@ -61,14 +61,13 @@
 
 </div>
 
-<div class="blog">
-    <div class="container-medium"></div>
-        <div class="blog-entry">
-            <div class="container-medium">
-                <h2 class="title">Travelblog</h2>        
-            </div>
-            <div class="container-small">
-                <p>Whenever Hoss and I make plans to visit a timezone that experiences tomorrow before we do, someone always asks why. As in, “why would you want to go to <em>there</em>?” spoken in the same tone you'd ask a guy planning to plug his schlong into an electrical socket why he hated living so much. So why? Why travel? Though I know the question is generally asked in the spirit of purest xenophobia, it’s still valid.</p>
+<div class="container-large">
+    <h1 class="blog-entry-title">Travelblog</h1>
+</div>
+<div class="story-container container-small">
+    
+    <div id="story" class="story" data-story-number="1">
+        <p>Whenever Hoss and I make plans to visit a timezone that experiences tomorrow before we do, someone always asks why. As in, “why would you want to go to <em>there</em>?” spoken in the same tone you'd ask a guy planning to plug his schlong into an electrical socket why he hated living so much. So why? Why travel? Though I know the question is generally asked in the spirit of purest xenophobia, it’s still valid.</p>
 
 <p>I don’t have an answer.</p>
 
@@ -92,10 +91,15 @@
 
 <p>But they do matter. We start out in this life muscle and sinews, but we leave it as a collection of memories. Travel fills some of those spans inside of me that would otherwise be just a white noise of time spent doing nothing much. I know of no more reliable way to turn dollars in to pieces of myself.</p>
 
-            </div>
-        </div>
-        <div class="container-small">
-            
+    </div>
+
+    <div id="footnote-collection" class="footnote-collection" data-footnote-collection="1">
+        <ul class="footnotes"></ul>
+    </div>
+    
+</div>
+<div class="social-buttons-container container-small">
+    
 
 
 
@@ -124,8 +128,10 @@
 
 
 
-    
-            <ol id="keep-reading" class="story-menu">
+            
+</div>
+<div class="keep-reading-container container-small">
+    <ol id="keep-reading" class="story-menu">
     
     <li class="story-quaternary"><a class="story-summary summary-small" href="/content/2015/10/10/the-demonist.html">
     <article class="story-summary-wrapper" data-slug="The Demonist">
@@ -223,10 +229,17 @@
 </a>
 </li>
     
-</ol>
-        </div>
-        <div class="container-small">
-            <footer>
+</ol>        
+</div>
+<div class="container-small">
+    <div id="footer-nav" class="footer-nav">
+    <a id="footer-nav-home" href="/">home</a>
+    <a href="/">stories</a>
+    <a href="/blog">blog</a>
+    <a href="/contact">contact</a>
+    <a href="/search">search</a>
+</div>
+    <footer>
     <div class="footer-meta">
         
             <h1>Travelblog</h1>            
@@ -245,9 +258,7 @@
 <script>
     var currentTime = new Date();
     document.getElementsByClassName('copyright-date')[0].innerHTML = currentTime.getFullYear();
-</script>                    
-        </div>
-    </div>
+</script>
 </div>
 
         </div>
@@ -263,6 +274,13 @@
                         paddingX: 10,
                     }
                 );
+                // do the footnotes (which depend on the font being loaded or they will be a bit
+                // misaligned)
+                ZnetUI.footnotes(
+                    'footnote-collection',
+                    {
+                    }
+                )
             });
             ZnetUI.lazyLoadImages(
                 'lazy-image', 

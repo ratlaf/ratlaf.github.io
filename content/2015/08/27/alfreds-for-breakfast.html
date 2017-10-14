@@ -10,6 +10,25 @@
         width: 100%;
     }
 
+    .no-js ul, .no-js ol {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .no-js .footnoteNumber {
+        float: left;
+    }
+    .no-js .footnoteNumber::after{
+        content: ': ';
+    }
+    .no-js .footnote {
+        margin-bottom: 20px;
+    }
+    .no-js .main-container {
+        padding: 0 20px;
+    }
+
     .js .cover-page {
         position: relative;
         height: 100vh;            
@@ -56,6 +75,26 @@
         }
     }
 
+    @supports (-ms-ime-align:auto) {
+        body:after{
+            content: 'https://ratlaf.github.io//images/large/wegener.jpg' !important;
+            display: none !important;
+        }
+        .cover-image-initial {
+            background-image: url("data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/wAALCAAXACgBASIA/8QAFwAAAwEAAAAAAAAAAAAAAAAAAgQFA//EACYQAAICAgECBQUAAAAAAAAAAAECAxEABBIFIRMiMUFxQlFhobH/2gAIAQEAAD8ATmHN5zdHgR+8PpmujqzOSK9gLzWQa77caPEAoBFsKs5H3ERJmEZJX+YMMZk+oCu+WjpGHadHN8aYknFQXikcO3IseVjv84ttE+Vhff0OYkeQ4EbFW7e+WeqSPPsSlQVDAe+L6jrCB4kCyG/UnvWNTjp5UVHKvwcl7ASj4fKvzmCVzX7Xn//Z") !important;
+        } 
+    }
+    @media all and (-ms-high-contrast:none)
+    {
+        body:after{
+            content: 'https://ratlaf.github.io//images/large/wegener.jpg' !important;
+            display: none !important;
+        }
+        .cover-image-initial {
+            background-image: url("data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/wAALCAAXACgBASIA/8QAFwAAAwEAAAAAAAAAAAAAAAAAAgQFA//EACYQAAICAgECBQUAAAAAAAAAAAECAxEABBIFIRMiMUFxQlFhobH/2gAIAQEAAD8ATmHN5zdHgR+8PpmujqzOSK9gLzWQa77caPEAoBFsKs5H3ERJmEZJX+YMMZk+oCu+WjpGHadHN8aYknFQXikcO3IseVjv84ttE+Vhff0OYkeQ4EbFW7e+WeqSPPsSlQVDAe+L6jrCB4kCyG/UnvWNTjp5UVHKvwcl7ASj4fKvzmCVzX7Xn//Z") !important;
+        } 
+    }
+    
     @media screen and (orientation:landscape) and (max-width: 767px) {
         body:after{
             content: 'https://ratlaf.github.io//images/medium/wegener.jpg';

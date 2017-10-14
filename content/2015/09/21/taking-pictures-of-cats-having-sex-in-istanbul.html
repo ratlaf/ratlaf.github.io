@@ -10,6 +10,25 @@
         width: 100%;
     }
 
+    .no-js ul, .no-js ol {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .no-js .footnoteNumber {
+        float: left;
+    }
+    .no-js .footnoteNumber::after{
+        content: ': ';
+    }
+    .no-js .footnote {
+        margin-bottom: 20px;
+    }
+    .no-js .main-container {
+        padding: 0 20px;
+    }
+
     .js .cover-page {
         position: relative;
         height: 100vh;            
@@ -56,6 +75,26 @@
         }
     }
 
+    @supports (-ms-ime-align:auto) {
+        body:after{
+            content: 'https://ratlaf.github.io//images/large/mosque.jpg' !important;
+            display: none !important;
+        }
+        .cover-image-initial {
+            background-image: url("data:image/png;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAXACgDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAIDBQQB/8QAIhAAAgIBAwQDAAAAAAAAAAAAAQIAEQMhMVEEEiKBBTKx/8QAFwEBAQEBAAAAAAAAAAAAAAAAAQMAAv/EABgRAQEBAQEAAAAAAAAAAAAAAAASAWET/9oADAMBAAIRAxEAPwDoHVYlNM4FGpVj+RBzsGQjGdm4mRjSwWL9pHAlqh2HkFF7i5GMXvdbuPLak3oWNH3JlxMB1UGr0ENY+zn2d5zBtuHIOYmA7KAAh8iLoxNHT6ccyuoBo7mWjKe3UabCIlUcDkK70eZFsvcup1/IiBeHIpYE7iIiLP/Z") !important;
+        } 
+    }
+    @media all and (-ms-high-contrast:none)
+    {
+        body:after{
+            content: 'https://ratlaf.github.io//images/large/mosque.jpg' !important;
+            display: none !important;
+        }
+        .cover-image-initial {
+            background-image: url("data:image/png;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAXACgDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAIDBQQB/8QAIhAAAgIBAwQDAAAAAAAAAAAAAQIAEQMhMVEEEiKBBTKx/8QAFwEBAQEBAAAAAAAAAAAAAAAAAQMAAv/EABgRAQEBAQEAAAAAAAAAAAAAAAASAWET/9oADAMBAAIRAxEAPwDoHVYlNM4FGpVj+RBzsGQjGdm4mRjSwWL9pHAlqh2HkFF7i5GMXvdbuPLak3oWNH3JlxMB1UGr0ENY+zn2d5zBtuHIOYmA7KAAh8iLoxNHT6ccyuoBo7mWjKe3UabCIlUcDkK70eZFsvcup1/IiBeHIpYE7iIiLP/Z") !important;
+        } 
+    }
+    
     @media screen and (orientation:landscape) and (max-width: 767px) {
         body:after{
             content: 'https://ratlaf.github.io//images/medium/mosque.jpg';

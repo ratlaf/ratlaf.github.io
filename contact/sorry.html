@@ -10,6 +10,25 @@
         width: 100%;
     }
 
+    .no-js ul, .no-js ol {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .no-js .footnoteNumber {
+        float: left;
+    }
+    .no-js .footnoteNumber::after{
+        content: ': ';
+    }
+    .no-js .footnote {
+        margin-bottom: 20px;
+    }
+    .no-js .main-container {
+        padding: 0 20px;
+    }
+
     .js .cover-page {
         position: relative;
         height: 100vh;            
@@ -56,6 +75,26 @@
         }
     }
 
+    @supports (-ms-ime-align:auto) {
+        body:after{
+            content: 'https://ratlaf.github.io//images/large/' !important;
+            display: none !important;
+        }
+        .cover-image-initial {
+            background-image: url("data:image/png;base64,") !important;
+        } 
+    }
+    @media all and (-ms-high-contrast:none)
+    {
+        body:after{
+            content: 'https://ratlaf.github.io//images/large/' !important;
+            display: none !important;
+        }
+        .cover-image-initial {
+            background-image: url("data:image/png;base64,") !important;
+        } 
+    }
+    
     @media screen and (orientation:landscape) and (max-width: 767px) {
         body:after{
             content: 'https://ratlaf.github.io//images/medium/';

@@ -10,6 +10,25 @@
         width: 100%;
     }
 
+    .no-js ul, .no-js ol {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .no-js .footnoteNumber {
+        float: left;
+    }
+    .no-js .footnoteNumber::after{
+        content: ': ';
+    }
+    .no-js .footnote {
+        margin-bottom: 20px;
+    }
+    .no-js .main-container {
+        padding: 0 20px;
+    }
+
     .js .cover-page {
         position: relative;
         height: 100vh;            
@@ -56,6 +75,26 @@
         }
     }
 
+    @supports (-ms-ime-align:auto) {
+        body:after{
+            content: 'https://ratlaf.github.io//images/large/chicken.jpg' !important;
+            display: none !important;
+        }
+        .cover-image-initial {
+            background-image: url("data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAXACgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIDBAH/xAAlEAACAgEDBAEFAAAAAAAAAAABAgADBBEhMQUSE1EyQUOBocH/xAAXAQADAQAAAAAAAAAAAAAAAAAAAQID/8QAGREBAQEBAQEAAAAAAAAAAAAAAQARAiEx/9oADAMBAAIRAxEAPwC1mJ44G5lFzkV6HYnacwWF+HbYWIYrwTwAZDqiVqtFyL3AgIT6P0kb7aZ5XfNdddjtMWSjnKIX5gczbXYgxwAhJBB/kz9SRxl+WsHSxOD7HMB2Es2Rj+O1Czd5DhGiTucWXUaKR3uGbX3Ee0hd6RkeOi3RA5XcAyWRkWW4NK7dp7W/cRGcn2FayoMUKg7Ow/GkpuyGNzoSSo101iJIVLRY63Y233DERDqRf//Z") !important;
+        } 
+    }
+    @media all and (-ms-high-contrast:none)
+    {
+        body:after{
+            content: 'https://ratlaf.github.io//images/large/chicken.jpg' !important;
+            display: none !important;
+        }
+        .cover-image-initial {
+            background-image: url("data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAXACgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIDBAH/xAAlEAACAgEDBAEFAAAAAAAAAAABAgADBBEhMQUSE1EyQUOBocH/xAAXAQADAQAAAAAAAAAAAAAAAAAAAQID/8QAGREBAQEBAQEAAAAAAAAAAAAAAQARAiEx/9oADAMBAAIRAxEAPwC1mJ44G5lFzkV6HYnacwWF+HbYWIYrwTwAZDqiVqtFyL3AgIT6P0kb7aZ5XfNdddjtMWSjnKIX5gczbXYgxwAhJBB/kz9SRxl+WsHSxOD7HMB2Es2Rj+O1Czd5DhGiTucWXUaKR3uGbX3Ee0hd6RkeOi3RA5XcAyWRkWW4NK7dp7W/cRGcn2FayoMUKg7Ow/GkpuyGNzoSSo101iJIVLRY63Y233DERDqRf//Z") !important;
+        } 
+    }
+    
     @media screen and (orientation:landscape) and (max-width: 767px) {
         body:after{
             content: 'https://ratlaf.github.io//images/medium/chicken.jpg';

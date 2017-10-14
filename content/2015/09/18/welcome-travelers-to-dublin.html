@@ -10,6 +10,25 @@
         width: 100%;
     }
 
+    .no-js ul, .no-js ol {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .no-js .footnoteNumber {
+        float: left;
+    }
+    .no-js .footnoteNumber::after{
+        content: ': ';
+    }
+    .no-js .footnote {
+        margin-bottom: 20px;
+    }
+    .no-js .main-container {
+        padding: 0 20px;
+    }
+
     .js .cover-page {
         position: relative;
         height: 100vh;            
@@ -56,6 +75,26 @@
         }
     }
 
+    @supports (-ms-ime-align:auto) {
+        body:after{
+            content: 'https://ratlaf.github.io//images/large/double-decker-bus.jpg' !important;
+            display: none !important;
+        }
+        .cover-image-initial {
+            background-image: url("data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAXACgDASIAAhEBAxEB/8QAGQABAQADAQAAAAAAAAAAAAAAAAUBAwQC/8QAKBAAAgICAAQEBwAAAAAAAAAAAQIAAxESBCExQQUTIlEUMkJhobHh/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgEA/8QAGREBAQADAQAAAAAAAAAAAAAAAAECERIx/9oADAMBAAIRAxEAPwCfxtrNfaq6BQ2MnrynT4DxBqN2zHnjHOcTqoXcqrM3vnnNvD26cOWVUQ7kfL1wBLnd+jjNLnxO7DOH69Z6FynGQRz79pKouDUWW3KTq6qPLOOo+82BqtdxbdXkfUAYCU1c49Dcokw2MpGvEIT22Uj9RH3R5SU4hXCo6Fj0yDM0PtWa9QFBJ/H8iJKrbXcyLbUoDLtnBHtAv2wSq4PbXtEQpWPNbPoAAJ9hERK0f//Z") !important;
+        } 
+    }
+    @media all and (-ms-high-contrast:none)
+    {
+        body:after{
+            content: 'https://ratlaf.github.io//images/large/double-decker-bus.jpg' !important;
+            display: none !important;
+        }
+        .cover-image-initial {
+            background-image: url("data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAXACgDASIAAhEBAxEB/8QAGQABAQADAQAAAAAAAAAAAAAAAAUBAwQC/8QAKBAAAgICAAQEBwAAAAAAAAAAAQIAAxESBCExQQUTIlEUMkJhobHh/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgEA/8QAGREBAQADAQAAAAAAAAAAAAAAAAECERIx/9oADAMBAAIRAxEAPwCfxtrNfaq6BQ2MnrynT4DxBqN2zHnjHOcTqoXcqrM3vnnNvD26cOWVUQ7kfL1wBLnd+jjNLnxO7DOH69Z6FynGQRz79pKouDUWW3KTq6qPLOOo+82BqtdxbdXkfUAYCU1c49Dcokw2MpGvEIT22Uj9RH3R5SU4hXCo6Fj0yDM0PtWa9QFBJ/H8iJKrbXcyLbUoDLtnBHtAv2wSq4PbXtEQpWPNbPoAAJ9hERK0f//Z") !important;
+        } 
+    }
+    
     @media screen and (orientation:landscape) and (max-width: 767px) {
         body:after{
             content: 'https://ratlaf.github.io//images/medium/double-decker-bus.jpg';

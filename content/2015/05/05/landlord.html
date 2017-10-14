@@ -10,6 +10,25 @@
         width: 100%;
     }
 
+    .no-js ul, .no-js ol {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .no-js .footnoteNumber {
+        float: left;
+    }
+    .no-js .footnoteNumber::after{
+        content: ': ';
+    }
+    .no-js .footnote {
+        margin-bottom: 20px;
+    }
+    .no-js .main-container {
+        padding: 0 20px;
+    }
+
     .js .cover-page {
         position: relative;
         height: 100vh;            
@@ -56,6 +75,26 @@
         }
     }
 
+    @supports (-ms-ime-align:auto) {
+        body:after{
+            content: 'https://ratlaf.github.io//images/large/sooners.jpg' !important;
+            display: none !important;
+        }
+        .cover-image-initial {
+            background-image: url("data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAXACgDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIDBQT/xAAjEAACAgICAQUBAQAAAAAAAAABAgARAxIEITEFEyJBUWEj/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AFLchXGzjXoiqAMriOUM22T5ea/J0MuIIVqxf3IKl5twejV/2vEBFzc3AzhmdlokMe7j4OVyNA5xnIL7b8H8nU+uTHrdGuj+TFfLkwZDiVWVbo7/AJXmoGoOcMhPxqhYo31CZvvKOIdNBkUCzt3CAzeo/wCGzKNjJr6lW1A/EAwhAvi9S9wqFPZH2JHmKOQxc4wXIrzUIQIbahl1AVqJAhCED//Z") !important;
+        } 
+    }
+    @media all and (-ms-high-contrast:none)
+    {
+        body:after{
+            content: 'https://ratlaf.github.io//images/large/sooners.jpg' !important;
+            display: none !important;
+        }
+        .cover-image-initial {
+            background-image: url("data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAXACgDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIDBQT/xAAjEAACAgICAQUBAQAAAAAAAAABAgARAxIEITEFEyJBUWEj/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AFLchXGzjXoiqAMriOUM22T5ea/J0MuIIVqxf3IKl5twejV/2vEBFzc3AzhmdlokMe7j4OVyNA5xnIL7b8H8nU+uTHrdGuj+TFfLkwZDiVWVbo7/AJXmoGoOcMhPxqhYo31CZvvKOIdNBkUCzt3CAzeo/wCGzKNjJr6lW1A/EAwhAvi9S9wqFPZH2JHmKOQxc4wXIrzUIQIbahl1AVqJAhCED//Z") !important;
+        } 
+    }
+    
     @media screen and (orientation:landscape) and (max-width: 767px) {
         body:after{
             content: 'https://ratlaf.github.io//images/medium/sooners.jpg';

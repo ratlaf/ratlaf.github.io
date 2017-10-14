@@ -24,7 +24,7 @@
 <script>
 
 </script>
-        <link rel="stylesheet" type="text/css" href="https://ratlaf.github.io//css/story.css">
+        <link rel="stylesheet" type="text/css" href="https://ratlaf.github.io//css/blog.css">
     </head>
     <body>
         <div class="main-container" id="page">
@@ -61,14 +61,13 @@
 
 </div>
 
-<div class="blog">
-    <div class="container-medium"></div>
-        <div class="blog-entry">
-            <div class="container-medium">
-                <h2 class="title">By Way Of Announcement, A TXT Conversation</h2>        
-            </div>
-            <div class="container-small">
-                <p>A true an accurate transcript of an important event transcribed in the vernacular of our day for the edification and amusement of internet passers-by.</p>
+<div class="container-large">
+    <h1 class="blog-entry-title">By Way Of Announcement, A TXT Conversation</h1>
+</div>
+<div class="story-container container-small">
+    
+    <div id="story" class="story" data-story-number="1">
+        <p>A true an accurate transcript of an important event transcribed in the vernacular of our day for the edification and amusement of internet passers-by.</p>
 
 <p>Iz bby, c?</p>
 
@@ -102,10 +101,15 @@
 
 <p>This blog isn't where I live, but anyway, <a href="http://www.flicker.com/zbell">here's what everyone wanted</a>.</p>
 
-            </div>
-        </div>
-        <div class="container-small">
-            
+    </div>
+
+    <div id="footnote-collection" class="footnote-collection" data-footnote-collection="1">
+        <ul class="footnotes"></ul>
+    </div>
+    
+</div>
+<div class="social-buttons-container container-small">
+    
 
 
 
@@ -134,8 +138,10 @@
 
 
 
-    
-            <ol id="keep-reading" class="story-menu">
+            
+</div>
+<div class="keep-reading-container container-small">
+    <ol id="keep-reading" class="story-menu">
     
     <li class="story-quaternary"><a class="story-summary summary-small" href="/content/2015/10/10/the-demonist.html">
     <article class="story-summary-wrapper" data-slug="The Demonist">
@@ -233,10 +239,17 @@
 </a>
 </li>
     
-</ol>
-        </div>
-        <div class="container-small">
-            <footer>
+</ol>        
+</div>
+<div class="container-small">
+    <div id="footer-nav" class="footer-nav">
+    <a id="footer-nav-home" href="/">home</a>
+    <a href="/">stories</a>
+    <a href="/blog">blog</a>
+    <a href="/contact">contact</a>
+    <a href="/search">search</a>
+</div>
+    <footer>
     <div class="footer-meta">
         
             <h1>By Way Of Announcement, A TXT Conversation</h1>            
@@ -255,9 +268,7 @@
 <script>
     var currentTime = new Date();
     document.getElementsByClassName('copyright-date')[0].innerHTML = currentTime.getFullYear();
-</script>                    
-        </div>
-    </div>
+</script>
 </div>
 
         </div>
@@ -273,6 +284,13 @@
                         paddingX: 10,
                     }
                 );
+                // do the footnotes (which depend on the font being loaded or they will be a bit
+                // misaligned)
+                ZnetUI.footnotes(
+                    'footnote-collection',
+                    {
+                    }
+                )
             });
             ZnetUI.lazyLoadImages(
                 'lazy-image', 

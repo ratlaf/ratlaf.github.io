@@ -24,7 +24,7 @@
 <script>
 
 </script>
-        <link rel="stylesheet" type="text/css" href="https://ratlaf.github.io//css/story.css">
+        <link rel="stylesheet" type="text/css" href="https://ratlaf.github.io//css/blog.css">
     </head>
     <body>
         <div class="main-container" id="page">
@@ -61,14 +61,13 @@
 
 </div>
 
-<div class="blog">
-    <div class="container-medium"></div>
-        <div class="blog-entry">
-            <div class="container-medium">
-                <h2 class="title">An Important Conversation</h2>        
-            </div>
-            <div class="container-small">
-                <p><strong>Scene:</strong> A romantic dinner leads to a conversation of the utmost importance.  This is the sort of intellectual fare that you are missing out on by not marrying me.  Unless, of course, you did marry me.  In which case, you sure are lucky.</p>
+<div class="container-large">
+    <h1 class="blog-entry-title">An Important Conversation</h1>
+</div>
+<div class="story-container container-small">
+    
+    <div id="story" class="story" data-story-number="1">
+        <p><strong>Scene:</strong> A romantic dinner leads to a conversation of the utmost importance.  This is the sort of intellectual fare that you are missing out on by not marrying me.  Unless, of course, you did marry me.  In which case, you sure are lucky.</p>
 
 <p><strong>Z:</strong> Would you kill a man for a million dollars?”</p>
 
@@ -90,7 +89,7 @@
 
 <p><strong>H:</strong> Just poke?</p>
 
-<p><strong>Z:</strong> Well, you’d have to draw a little blood.<sup><a class="footLink--upper" id="footLink--upper_1" href="#footLink--lower_1">1</a></sup>  But we’ll guarantee the hobo prompt medical treatment.</p>
+<p><strong>Z:</strong> Well, you’d have to draw a little blood.<sup><a class="footLink--upper" id="footLink--upper_1" href="#footLink--lower_1" data-footnote-number="1">1</a></sup>  But we’ll guarantee the hobo prompt medical treatment.</p>
 
 <p><strong>H:</strong> This is the most thinking you’ve done all day.</p>
 
@@ -108,10 +107,15 @@
 
 <p><strong>Z:</strong> Done.</p>
 
-            </div>
-        </div>
-        <div class="container-small">
-            
+    </div>
+
+    <div id="footnote-collection" class="footnote-collection" data-footnote-collection="1">
+        <ul class="footnotes"><li class="footnote" id="footnote_1" data-footnote-number="1"><ul class="footnoteFields"><li class="footnoteNumber"><a class="footLink--lower" id="footLink--lower_1" href="#footLink--upper_1" data-footnote-number="1">1</a></li><li class="footnoteContent">Just a little</li></ul></li></ul>
+    </div>
+    
+</div>
+<div class="social-buttons-container container-small">
+    
 
 
 
@@ -140,8 +144,10 @@
 
 
 
-    
-            <ol id="keep-reading" class="story-menu">
+            
+</div>
+<div class="keep-reading-container container-small">
+    <ol id="keep-reading" class="story-menu">
     
     <li class="story-quaternary"><a class="story-summary summary-small" href="/content/2015/10/10/the-demonist.html">
     <article class="story-summary-wrapper" data-slug="The Demonist">
@@ -239,10 +245,17 @@
 </a>
 </li>
     
-</ol>
-        </div>
-        <div class="container-small">
-            <footer>
+</ol>        
+</div>
+<div class="container-small">
+    <div id="footer-nav" class="footer-nav">
+    <a id="footer-nav-home" href="/">home</a>
+    <a href="/">stories</a>
+    <a href="/blog">blog</a>
+    <a href="/contact">contact</a>
+    <a href="/search">search</a>
+</div>
+    <footer>
     <div class="footer-meta">
         
             <h1>An Important Conversation</h1>            
@@ -261,9 +274,7 @@
 <script>
     var currentTime = new Date();
     document.getElementsByClassName('copyright-date')[0].innerHTML = currentTime.getFullYear();
-</script>                    
-        </div>
-    </div>
+</script>
 </div>
 
         </div>
@@ -279,6 +290,13 @@
                         paddingX: 10,
                     }
                 );
+                // do the footnotes (which depend on the font being loaded or they will be a bit
+                // misaligned)
+                ZnetUI.footnotes(
+                    'footnote-collection',
+                    {
+                    }
+                )
             });
             ZnetUI.lazyLoadImages(
                 'lazy-image', 

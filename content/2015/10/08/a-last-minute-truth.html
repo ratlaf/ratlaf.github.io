@@ -10,6 +10,25 @@
         width: 100%;
     }
 
+    .no-js ul, .no-js ol {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .no-js .footnoteNumber {
+        float: left;
+    }
+    .no-js .footnoteNumber::after{
+        content: ': ';
+    }
+    .no-js .footnote {
+        margin-bottom: 20px;
+    }
+    .no-js .main-container {
+        padding: 0 20px;
+    }
+
     .js .cover-page {
         position: relative;
         height: 100vh;            
@@ -56,6 +75,26 @@
         }
     }
 
+    @supports (-ms-ime-align:auto) {
+        body:after{
+            content: 'https://ratlaf.github.io//images/large/45bullet-closer.jpg' !important;
+            display: none !important;
+        }
+        .cover-image-initial {
+            background-image: url("data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAXACgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAMCBAH/xAAoEAACAgEDAgQHAAAAAAAAAAABAgADERIhQQRRBTJhcRMiMUKBwfD/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEQMRAD8Ah4oF6m6oVDBbYyQsX4IRTipT5f2e8klhbqrjyK2x+cTyoKXJbcKCcd5iNVvWw0gITkYBOBn2lKbbKH1VHQy+fXz6EcyNVJ6mtWyCxYh2J+g7xW2aSxOoodIJ7cSjPVopxfWulHO4HB7RNPYT0Nqsc/OpHvvEI46WIYsSd9jO52BqFhHptz7xEUiBqVjlSQDxLNXpTSowBuQef7MRCue1/s4zkxESsv/Z") !important;
+        } 
+    }
+    @media all and (-ms-high-contrast:none)
+    {
+        body:after{
+            content: 'https://ratlaf.github.io//images/large/45bullet-closer.jpg' !important;
+            display: none !important;
+        }
+        .cover-image-initial {
+            background-image: url("data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAXACgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAMCBAH/xAAoEAACAgEDAgQHAAAAAAAAAAABAgADERIhQQRRBTJhcRMiMUKBwfD/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEQMRAD8Ah4oF6m6oVDBbYyQsX4IRTipT5f2e8klhbqrjyK2x+cTyoKXJbcKCcd5iNVvWw0gITkYBOBn2lKbbKH1VHQy+fXz6EcyNVJ6mtWyCxYh2J+g7xW2aSxOoodIJ7cSjPVopxfWulHO4HB7RNPYT0Nqsc/OpHvvEI46WIYsSd9jO52BqFhHptz7xEUiBqVjlSQDxLNXpTSowBuQef7MRCue1/s4zkxESsv/Z") !important;
+        } 
+    }
+    
     @media screen and (orientation:landscape) and (max-width: 767px) {
         body:after{
             content: 'https://ratlaf.github.io//images/medium/45bullet-closer.jpg';

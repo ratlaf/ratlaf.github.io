@@ -24,7 +24,7 @@
 <script>
 
 </script>
-        <link rel="stylesheet" type="text/css" href="https://ratlaf.github.io//css/story.css">
+        <link rel="stylesheet" type="text/css" href="https://ratlaf.github.io//css/blog.css">
     </head>
     <body>
         <div class="main-container" id="page">
@@ -61,14 +61,13 @@
 
 </div>
 
-<div class="blog">
-    <div class="container-medium"></div>
-        <div class="blog-entry">
-            <div class="container-medium">
-                <h2 class="title">Innocents Still Abroad</h2>        
-            </div>
-            <div class="container-small">
-                <p>I went to Turkey with a headfull of American ideas about Islam.  </p>
+<div class="container-large">
+    <h1 class="blog-entry-title">Innocents Still Abroad</h1>
+</div>
+<div class="story-container container-small">
+    
+    <div id="story" class="story" data-story-number="1">
+        <p>I went to Turkey with a headfull of American ideas about Islam.  </p>
 
 <p>Not long after we arrived the afternoon call to prayer came up on the speakers under the Blue Mosque and—after being startled by how <em>loud</em> the chanting really is—we smiled amongst ourselves and thought yes, we expected that.   So profound was our understanding of this place and its religion that we waited for everyone to…do something.  Roll out their rugs and get to praying?  Instead we got nothing.  Not one Turk on the street even glanced in the direction of the mosque.</p>
 
@@ -90,10 +89,15 @@
 
 <p>Give me a foe, or a friend, but don’t give me a reflection of my confused self.  </p>
 
-            </div>
-        </div>
-        <div class="container-small">
-            
+    </div>
+
+    <div id="footnote-collection" class="footnote-collection" data-footnote-collection="1">
+        <ul class="footnotes"></ul>
+    </div>
+    
+</div>
+<div class="social-buttons-container container-small">
+    
 
 
 
@@ -122,8 +126,10 @@
 
 
 
-    
-            <ol id="keep-reading" class="story-menu">
+            
+</div>
+<div class="keep-reading-container container-small">
+    <ol id="keep-reading" class="story-menu">
     
     <li class="story-quaternary"><a class="story-summary summary-small" href="/content/2015/10/10/the-demonist.html">
     <article class="story-summary-wrapper" data-slug="The Demonist">
@@ -221,10 +227,17 @@
 </a>
 </li>
     
-</ol>
-        </div>
-        <div class="container-small">
-            <footer>
+</ol>        
+</div>
+<div class="container-small">
+    <div id="footer-nav" class="footer-nav">
+    <a id="footer-nav-home" href="/">home</a>
+    <a href="/">stories</a>
+    <a href="/blog">blog</a>
+    <a href="/contact">contact</a>
+    <a href="/search">search</a>
+</div>
+    <footer>
     <div class="footer-meta">
         
             <h1>Innocents Still Abroad</h1>            
@@ -243,9 +256,7 @@
 <script>
     var currentTime = new Date();
     document.getElementsByClassName('copyright-date')[0].innerHTML = currentTime.getFullYear();
-</script>                    
-        </div>
-    </div>
+</script>
 </div>
 
         </div>
@@ -261,6 +272,13 @@
                         paddingX: 10,
                     }
                 );
+                // do the footnotes (which depend on the font being loaded or they will be a bit
+                // misaligned)
+                ZnetUI.footnotes(
+                    'footnote-collection',
+                    {
+                    }
+                )
             });
             ZnetUI.lazyLoadImages(
                 'lazy-image', 

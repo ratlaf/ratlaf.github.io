@@ -10,6 +10,25 @@
         width: 100%;
     }
 
+    .no-js ul, .no-js ol {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .no-js .footnoteNumber {
+        float: left;
+    }
+    .no-js .footnoteNumber::after{
+        content: ': ';
+    }
+    .no-js .footnote {
+        margin-bottom: 20px;
+    }
+    .no-js .main-container {
+        padding: 0 20px;
+    }
+
     .js .cover-page {
         position: relative;
         height: 100vh;            
@@ -56,6 +75,26 @@
         }
     }
 
+    @supports (-ms-ime-align:auto) {
+        body:after{
+            content: 'https://ratlaf.github.io//images/large/manateeswim.jpg' !important;
+            display: none !important;
+        }
+        .cover-image-initial {
+            background-image: url("data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAXACgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIDBAH/xAAkEAACAgICAQMFAAAAAAAAAAABAgARAxIEMSEyUXEiJEGBsf/EABYBAQEBAAAAAAAAAAAAAAAAAAEAA//EABYRAQEBAAAAAAAAAAAAAAAAAAARAf/aAAwDAQACEQMRAD8AwBkzrotoR0K8MYONkTZzV+AJDAShAogmbmOB8GmQkE9fMWWqTmdcbfbLqCPq78fM4mXG6sETZrrec0ZTqQxToiV8Jlxct0ulf03KpHIjA3RibMuLIjbWGH5HvEVWscXHRYLZ9yZQ/GBUUn7JiILAoA4OVb09NH+ytkGVtaFdxECll5CqWQk1QiIkI//Z") !important;
+        } 
+    }
+    @media all and (-ms-high-contrast:none)
+    {
+        body:after{
+            content: 'https://ratlaf.github.io//images/large/manateeswim.jpg' !important;
+            display: none !important;
+        }
+        .cover-image-initial {
+            background-image: url("data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAXACgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIDBAH/xAAkEAACAgICAQMFAAAAAAAAAAABAgARAxIEMSEyUXEiJEGBsf/EABYBAQEBAAAAAAAAAAAAAAAAAAEAA//EABYRAQEBAAAAAAAAAAAAAAAAAAARAf/aAAwDAQACEQMRAD8AwBkzrotoR0K8MYONkTZzV+AJDAShAogmbmOB8GmQkE9fMWWqTmdcbfbLqCPq78fM4mXG6sETZrrec0ZTqQxToiV8Jlxct0ulf03KpHIjA3RibMuLIjbWGH5HvEVWscXHRYLZ9yZQ/GBUUn7JiILAoA4OVb09NH+ytkGVtaFdxECll5CqWQk1QiIkI//Z") !important;
+        } 
+    }
+    
     @media screen and (orientation:landscape) and (max-width: 767px) {
         body:after{
             content: 'https://ratlaf.github.io//images/medium/manateeswim.jpg';

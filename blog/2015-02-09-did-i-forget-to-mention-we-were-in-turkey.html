@@ -24,7 +24,7 @@
 <script>
 
 </script>
-        <link rel="stylesheet" type="text/css" href="https://ratlaf.github.io//css/story.css">
+        <link rel="stylesheet" type="text/css" href="https://ratlaf.github.io//css/blog.css">
     </head>
     <body>
         <div class="main-container" id="page">
@@ -61,16 +61,15 @@
 
 </div>
 
-<div class="blog">
-    <div class="container-medium"></div>
-        <div class="blog-entry">
-            <div class="container-medium">
-                <h2 class="title">Did I Forget To Mention We Were In Turkey?</h2>        
-            </div>
-            <div class="container-small">
-                <p>So yes, we were in Turkey. We were also in Croatia, Slovenia, Italy and Prague.  Being as we all hail from the land of Purple Mountain Majesty and Valley of the High-Fructose Corn Syrup, it’s a good bet that no one here knows where any of those places are.  And honestly, who would care?  The up country is Canada and that other one, the sturdy leg to Florida's gimpy leg, that’s the land of Drug Murder.  No more geography, yeah? </p>
+<div class="container-large">
+    <h1 class="blog-entry-title">Did I Forget To Mention We Were In Turkey?</h1>
+</div>
+<div class="story-container container-small">
+    
+    <div id="story" class="story" data-story-number="1">
+        <p>So yes, we were in Turkey<sup><a class="footLink--upper" id="footLink--upper_1" href="#footLink--lower_1" data-footnote-number="1">1</a></sup>. We were also in Croatia, Slovenia, Italy and Prague.  Being as we all hail from the land of Purple Mountain Majesty and Valley of the High-Fructose Corn Syrup, it’s a good bet that no one here knows where any of those places are.  And honestly, who would care?  The up country is Canada and that other one, the sturdy leg to Florida's gimpy leg, that’s the land of Drug Murder.  No more geography, yeah? </p>
 
-<p>But!  I just called you ignorant.  Admit it, you are!  Before your feelings get too badly bruised, let me tell you that before I had fifteen hours of airplane time to acquaint myself with the guidebook, I didn’t know where any of these places were either.  Seriously.  I had no idea.  That’s how prepared I am when we launch into one of these glob-trotting episodes.  </p>
+<p>But!  I just called you ignorant.  Admit it, you are!<sup><a class="footLink--upper" id="footLink--upper_2" href="#footLink--lower_2" data-footnote-number="2">2</a></sup>  Before your feelings get too badly bruised, let me tell you that before I had fifteen hours of airplane time to acquaint myself with the guidebook, I didn’t know where any of these places were either.  Seriously.  I had no idea.  That’s how prepared I am when we launch into one of these glob-trotting episodes.  </p>
 
 <p>Since wandering blindly into foreign lands is what I do, and since you don't know a single goddamned thing about all of this, let's get educated together.</p>
 
@@ -106,10 +105,15 @@
 
 <p>Relevant lessons building on this lecture.  </p>
 
-            </div>
-        </div>
-        <div class="container-small">
-            
+    </div>
+
+    <div id="footnote-collection" class="footnote-collection" data-footnote-collection="1">
+        <ul class="footnotes"><li class="footnote" id="footnote_1" data-footnote-number="1"><ul class="footnoteFields"><li class="footnoteNumber"><a class="footLink--lower" id="footLink--lower_1" href="#footLink--upper_1" data-footnote-number="1">1</a></li><li class="footnoteContent">Turkey!</li></ul></li><li class="footnote" id="footnote_2" data-footnote-number="2"><ul class="footnoteFields"><li class="footnoteNumber"><a class="footLink--lower" id="footLink--lower_2" href="#footLink--upper_2" data-footnote-number="2">2</a></li><li class="footnoteContent">So ignorant!</li></ul></li></ul>
+    </div>
+    
+</div>
+<div class="social-buttons-container container-small">
+    
 
 
 
@@ -138,8 +142,10 @@
 
 
 
-    
-            <ol id="keep-reading" class="story-menu">
+            
+</div>
+<div class="keep-reading-container container-small">
+    <ol id="keep-reading" class="story-menu">
     
     <li class="story-quaternary"><a class="story-summary summary-small" href="/content/2015/10/10/the-demonist.html">
     <article class="story-summary-wrapper" data-slug="The Demonist">
@@ -237,10 +243,17 @@
 </a>
 </li>
     
-</ol>
-        </div>
-        <div class="container-small">
-            <footer>
+</ol>        
+</div>
+<div class="container-small">
+    <div id="footer-nav" class="footer-nav">
+    <a id="footer-nav-home" href="/">home</a>
+    <a href="/">stories</a>
+    <a href="/blog">blog</a>
+    <a href="/contact">contact</a>
+    <a href="/search">search</a>
+</div>
+    <footer>
     <div class="footer-meta">
         
             <h1>Did I Forget To Mention We Were In Turkey?</h1>            
@@ -259,9 +272,7 @@
 <script>
     var currentTime = new Date();
     document.getElementsByClassName('copyright-date')[0].innerHTML = currentTime.getFullYear();
-</script>                    
-        </div>
-    </div>
+</script>
 </div>
 
         </div>
@@ -277,6 +288,13 @@
                         paddingX: 10,
                     }
                 );
+                // do the footnotes (which depend on the font being loaded or they will be a bit
+                // misaligned)
+                ZnetUI.footnotes(
+                    'footnote-collection',
+                    {
+                    }
+                )
             });
             ZnetUI.lazyLoadImages(
                 'lazy-image', 
