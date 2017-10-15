@@ -128,8 +128,7 @@ input:focus, select:focus, textarea:focus {
   overflow: hidden !important; }
 
 .main-container {
-  position: relative;
-  min-height: 100vh; }
+  position: relative; }
 
 .container-medium {
   max-width: 992px;
@@ -344,7 +343,7 @@ input:focus, select:focus, textarea:focus {
 
 .toc {
   overflow: hidden;
-  margin: 20vh 0 0 0;
+  margin: 200px 0 0 0;
   text-transform: uppercase;
   font-family: "Karla", "Arial", sans-serif;
   text-align: center;
@@ -369,7 +368,7 @@ input:focus, select:focus, textarea:focus {
       display: inline-block; }
 
 .top-padded-story {
-  margin-top: 20vh; }
+  margin-top: 200px; }
 
 .story {
   flex: 3 0 calc(70% - 40px);
@@ -446,7 +445,7 @@ body.locked {
   display: none; }
 
 .top-padded-footnotes {
-  margin-top: 20vh; }
+  margin-top: 200px; }
 
 .js .footnote-collection {
   flex: 1 0 30%;
@@ -803,7 +802,7 @@ body.locked {
   font-family: "Karla", "Arial", sans-serif;
   text-transform: uppercase;
   font-size: 16px;
-  margin: 33vh 0 20px 0;
+  margin: 200px 0 20px 0;
   word-spacing: 2em; }
   .footer-nav a {
     color: #333333;
@@ -825,8 +824,8 @@ body.locked {
 footer {
   display: block;
   color: #808080;
-  margin-top: 33vh;
-  margin-bottom: 10vh; }
+  margin-top: 300px;
+  margin-bottom: 300px; }
   footer .footer-meta {
     border-top: 1px solid #D9D9D9;
     padding: 20px; }

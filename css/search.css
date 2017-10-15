@@ -128,8 +128,7 @@ input:focus, select:focus, textarea:focus {
   overflow: hidden !important; }
 
 .main-container {
-  position: relative;
-  min-height: 100vh; }
+  position: relative; }
 
 .container-medium {
   max-width: 992px;
@@ -628,8 +627,8 @@ body.js .ss-form-container {
 footer {
   display: block;
   color: #808080;
-  margin-top: 33vh;
-  margin-bottom: 10vh; }
+  margin-top: 300px;
+  margin-bottom: 300px; }
   footer .footer-meta {
     border-top: 1px solid #D9D9D9;
     padding: 20px; }
