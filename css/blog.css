@@ -79,8 +79,7 @@ p {
   font-family: "Lora", "Palatino", "Georgia", serif;
   font-size: 1.6em;
   line-height: 1.6em;
-  margin: 1.2em 0 0 0;
-  color: red; }
+  margin: 1.2em 0 0 0; }
   p a {
     color: #333333;
     border-bottom: 2px solid #FF2200;
@@ -149,12 +148,10 @@ input:focus, select:focus, textarea:focus {
 @media (min-width: 768px) {
   p {
     line-height: 1.6em;
-    margin: 0 0 1em 0;
-    color: pink; } }
+    margin: 0 0 1em 0; } }
 @media (min-width: 992px) {
   p {
-    line-height: 1.7em;
-    color: green; } }
+    line-height: 1.7em; } }
 /*==========  Javascript window size detection  ==========*/
 .pw__xs {
   display: none; }
