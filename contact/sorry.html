@@ -253,6 +253,23 @@
                 function(){
                     // reveal the title. 
                     ZnetUI.curtain('title-curtain');
+                    
+                    // do the footnotes (which depend on the font being loaded or they will be a bit
+                    // misaligned)
+                    ZnetUI.footnotes(
+                        'footnote-collection',
+                        {
+                            nudge: -11
+                        },
+                        function(){
+                            ZnetUI.lazyLoadImages(
+                                'lazy-image', 
+                                {
+                                    buffer: 500
+                                }
+                            );
+                        }
+                    )
                 }
             );
             ZnetUI.titleFill(
@@ -263,15 +280,6 @@
                     yNudgeDown: 0
                 }
             );
-
-            // do the footnotes (which depend on the font being loaded or they will be a bit
-            // misaligned)
-            ZnetUI.footnotes(
-                'footnote-collection',
-                {
-                    nudge: -11
-                }
-            )
         });
     });
     ZnetUI.nav('navbar', 
@@ -281,15 +289,9 @@
             tabNav: 'tab-nav'
         }
     );
-    ZnetUI.TOC(
+    ZnetUI.internalLinks(
         {
             navHeight: 60
-        }
-    );
-    ZnetUI.lazyLoadImages(
-        'lazy-image', 
-        {
-            buffer: 500
         }
     );
     ZnetUI.lazyLoadCSS('https://ratlaf.github.io//css/fontello.css');

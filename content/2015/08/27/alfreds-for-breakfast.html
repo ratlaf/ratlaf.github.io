@@ -334,7 +334,6 @@
 
 
 <div class="socialButtons">
-    Alfreds For Breakfast
 	<span class="nag">i don't need your approval</span>
     
         <a aria-label="twitter button" onclick="window.open('http://twitter.com/share?text=' + encodeURIComponent('Alfreds For Breakfast') + ' %7C A short story by Zachary Bell %7C via @zachary_bell &url=https://ratlaf.github.io//content/2015/08/27/alfreds-for-breakfast.html', 'windowOpenTab', 'width=600,height=450,left=100, top=100'); return false;" href="">
@@ -556,6 +555,23 @@
                 function(){
                     // reveal the title. 
                     ZnetUI.curtain('title-curtain');
+                    
+                    // do the footnotes (which depend on the font being loaded or they will be a bit
+                    // misaligned)
+                    ZnetUI.footnotes(
+                        'footnote-collection',
+                        {
+                            nudge: -11
+                        },
+                        function(){
+                            ZnetUI.lazyLoadImages(
+                                'lazy-image', 
+                                {
+                                    buffer: 500
+                                }
+                            );
+                        }
+                    )
                 }
             );
             ZnetUI.titleFill(
@@ -566,15 +582,6 @@
                     yNudgeDown: 0
                 }
             );
-
-            // do the footnotes (which depend on the font being loaded or they will be a bit
-            // misaligned)
-            ZnetUI.footnotes(
-                'footnote-collection',
-                {
-                    nudge: -11
-                }
-            )
         });
     });
     ZnetUI.nav('navbar', 
@@ -584,15 +591,9 @@
             tabNav: 'tab-nav'
         }
     );
-    ZnetUI.TOC(
+    ZnetUI.internalLinks(
         {
             navHeight: 60
-        }
-    );
-    ZnetUI.lazyLoadImages(
-        'lazy-image', 
-        {
-            buffer: 500
         }
     );
     ZnetUI.lazyLoadCSS('https://ratlaf.github.io//css/fontello.css');
