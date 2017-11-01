@@ -468,8 +468,12 @@ body.locked {
     .js .footnote-collection .footnoteFields .footnoteNumber {
       float: left; }
     .js .footnote-collection .footnoteFields .footnoteContent {
-      font-size: 1.4em;
+      font-size: 14px;
       color: #808080; }
+      .js .footnote-collection .footnoteFields .footnoteContent p {
+        font-size: 14px;
+        color: #808080;
+        margin: 0 0 1em 0; }
 
 .mobile-footnote {
   display: block;
@@ -482,6 +486,13 @@ body.locked {
   position: relative;
   overflow: hidden;
   display: flex; }
+  .mobile-footnote p {
+    font-size: 14px;
+    margin: 0 0 1em 0;
+    font-family: "Karla", "Arial", sans-serif; }
+  .mobile-footnote sup {
+    float: left;
+    margin-right: 5px; }
   .mobile-footnote .pointer {
     content: "\A";
     border-style: solid;
