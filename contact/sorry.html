@@ -129,7 +129,8 @@
 </script>
 <style>
     .js .body-curtain, .js .title-curtain {
-
+        opacity: 0;
+        visibility: hidden;
     }
 </style>
 <meta charset="utf-8" />
@@ -192,6 +193,17 @@
  
     </div>
     <script>
+
+    window.addEventListener('error', function (e) {
+        var error = e.error;
+        ZnetUI.curtain('body-curtain');
+        ZnetUI.curtain('title-curtain');
+    });
+    window.setTimeout(function(){
+        ZnetUI.curtain('body-curtain');
+        ZnetUI.curtain('title-curtain');
+    }, 2000)
+
     var getCoverImage = function (callback) {
         var img;
         var resizeId;

@@ -129,7 +129,8 @@
 </script>
 <style>
     .js .body-curtain, .js .title-curtain {
-
+        opacity: 0;
+        visibility: hidden;
     }
 </style>
 <meta charset="utf-8" />
@@ -729,9 +730,7 @@
         </div>
     
         <div id="footnote-collection" class="footnote-collection top-padded-footnotes" data-footnote-collection="1">
-            <ul class="footnotes"><li class="footnote" id="footnote_1" data-footnote-number="1"><ul class="footnoteFields"><li class="footnoteNumber"><a class="footLink--lower" id="footLink--lower_1" href="#footLink--upper_1" data-footnote-number="1">1</a></li><li class="footnoteContent"><p>Or, more likely, </p>
-<p>now you’re being disemboweled by a </p>
-<p>cranky minion of Hell. </p></li></ul></li><li class="footnote" id="footnote_2" data-footnote-number="2"><ul class="footnoteFields"><li class="footnoteNumber"><a class="footLink--lower" id="footLink--lower_2" href="#footLink--upper_2" data-footnote-number="2">2</a></li><li class="footnoteContent"><p>Wherein we engage in a much longer footnote that will take up lots and lots of space</p>
+            <ul class="footnotes"><li class="footnote" id="footnote_1" data-footnote-number="1"><ul class="footnoteFields"><li class="footnoteNumber"><a class="footLink--lower" id="footLink--lower_1" href="#footLink--upper_1" data-footnote-number="1">1</a></li><li class="footnoteContent">Or, more likely, now you’re being disemboweled by a cranky minion of Hell. </li></ul></li><li class="footnote" id="footnote_2" data-footnote-number="2"><ul class="footnoteFields"><li class="footnoteNumber"><a class="footLink--lower" id="footLink--lower_2" href="#footLink--upper_2" data-footnote-number="2">2</a></li><li class="footnoteContent"><p>Wherein we engage in a much longer footnote that will take up lots and lots of space</p>
 <p>Wherein we engage in a much longer footnote that will take up lots and lots of space</p>
 <p>Wherein we engage in a much longer footnote that will take up lots and lots of space</p>
 <p>Wherein we engage in a much longer footnote that will take up lots and lots of space</p>
@@ -913,6 +912,17 @@
  
     </div>
     <script>
+
+    window.addEventListener('error', function (e) {
+        var error = e.error;
+        ZnetUI.curtain('body-curtain');
+        ZnetUI.curtain('title-curtain');
+    });
+    window.setTimeout(function(){
+        ZnetUI.curtain('body-curtain');
+        ZnetUI.curtain('title-curtain');
+    }, 2000)
+
     var getCoverImage = function (callback) {
         var img;
         var resizeId;
