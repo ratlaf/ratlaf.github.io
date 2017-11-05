@@ -484,7 +484,8 @@ body.locked {
   font-family: "Karla", "Arial", sans-serif;
   line-height: 17px;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  display: flex; }
   .mobile-footnote p {
     font-size: 14px;
     margin: 0 0 1em 0;
